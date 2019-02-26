@@ -11,15 +11,16 @@
   <form id ="funnyQuotes">
     <field name="say">
       <prompt>Say one of the silly phrases</prompt>
-      <grammar src="grammars/lab2_quotes.xml:"/>
+      <grammar src="grammars/lab2_quotes.xml"/>
     </field>
     <filled>
     <prompt>
       You said: <value expr="say$.utterance"/>,
-      with the interpretation <value expr="foo$.interpretation"/>
-      and with a confidence of <value expr="foo$.confidence"/>
+      with the interpretation <value expr="say$.interpretation"/>
+      and with a confidence of <value expr="say$.confidence"/>
       <break time ="2s"/>
       </prompt>
+    </filled>
       </form>
 
 </vxml>
