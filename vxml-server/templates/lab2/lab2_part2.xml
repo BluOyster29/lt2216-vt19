@@ -8,9 +8,7 @@
     </field>
     <filled>
       <prompt>
-        Object was: <value expr="something$.interpretation.object"/>,
-        Action was: <value expr="something.interpretation.action"/>,
-        State was: <value expr="something.interpretation.state"/>
+        we did it
       </prompt>>
     </filled>
   </form>
