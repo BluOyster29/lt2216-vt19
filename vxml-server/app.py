@@ -29,21 +29,21 @@ def send_grammar(path):
     return send_from_directory('grammars', path)
 
 @app.route('/delayed_flights')
-def hello():
+def delayed_flights():
     vxml = render_template('delayed_flights.xml', temp=temp)
     response = make_response(vxml)
     response.headers["Content-Type"] = "application/xml"
     return response
 
 @app.route('/life_advice')
-def hello():
+def life_advice():
     vxml = render_template('life_advice.xml', temp=temp)
     response = make_response(vxml)
     response.headers["Content-Type"] = "application/xml"
     return response
 
 @app.route('/flight_booking')
-def hello():
+def flight_booking():
     vxml = render_template('flight_booking.xml', temp=temp)
     response = make_response(vxml)
     response.headers["Content-Type"] = "application/xml"
