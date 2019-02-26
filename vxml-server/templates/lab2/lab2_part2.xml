@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vxml version="2.0">
+  <nomatch>
+    I didn't understand.
+  </nomatch>
+  
+  <noinput>
+    You didn't say anything.
+  </noinput>
+
+<form id="commands">
+    <field name="something">
+      <prompt>What would you like to do?</prompt>
+      <grammar src="grammars/lab2_commands.xml"/>
+    </field>
+    <filled>
+      <prompt>
+        Object was: <value expr="something$.interpretation.object"/>,
+        Action was: <value expr="something.interpretation.action"/>,
+        State was: <value expr="something.interpretation.state"/>
+      </prompt>>
+    </filled>
+  </form>
+
+</vxml>
