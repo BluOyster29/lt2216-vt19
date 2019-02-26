@@ -7,9 +7,6 @@
              <item>open</item>
              <item>close</item>
          </one-of>
-    <ruleref uri="#object"/>
-    <ruleref uri="#state"/>
-    <tag>out.o=rules.object; out.s=rules.state;</tag>
     </rule>
 
     <rule id="object">
