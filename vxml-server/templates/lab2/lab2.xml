@@ -20,7 +20,15 @@
       and with a confidence of <value expr="say$.confidence"/>
       <break time ="2s"/>
       </prompt>
+      <goto next="#commands"/>
     </filled>
-      </form>
+  </form>
 
+  <form id="commands">
+    <field name="something">
+      <prompt>What would you like to do?</prompt>
+      <grammar src="grammars/lab2_commands.xml"/>
+    </field>
+    
+  </form>
 </vxml>
