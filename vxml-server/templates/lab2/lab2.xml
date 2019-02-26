@@ -24,11 +24,4 @@
     </filled>
   </form>
 
-  <form id="commands">
-    <field name="something">
-      <prompt>What would you like to do?</prompt>
-      <grammar src="grammars/lab2_commands.xml"/>
-    </field>
-    
-  </form>
 </vxml>

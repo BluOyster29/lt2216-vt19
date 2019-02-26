@@ -17,6 +17,13 @@ def lab2():
     response.headers["Content-Type"] = "application/xml"
     return response
 
+@app.route('/lab2_commands')
+def lab2_commands():
+    vxml = render_template('lab2/lab2_commands.xml')
+    response = make_response(vxml)
+    response.headers["Content-Type"] = "application/xml"
+    return response
+
 @app.route('/lab3')
 def lab3():
     vxml = render_template('lab3/lab3.xml')

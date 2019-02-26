@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<grammar version="1.0" tag-format="semantics/1.0" root="quotes">
+    
+    <rule id="action">
+         <one-of>
+             <item>turn<tag>out='turn';</tag></item>
+             <item>open<tag>out='open;</tag></item>
+             <item>close<tag>out='close;</tag></item>
+         </one-of>
+    <ruleref uri="#object"/>
+    <ruleref uri="#state"/>
+    <tag>out.o=rules.object; out.s=rules.state;</tag>
+    </rule>
+
+    <rule id="object">
+       <item repeat="0-1">the</item>
+       <one-of>
+          <item>light<tag>out='light';</tag></item>
+          <item>heat<tag>out='heating';</tag></item>
+          <item>A C<tag> out = 'air conditioning'; </tag></item>
+          <item>air conditioning<tag>out ='air conditioning;'</tag></item>
+          <item>window<tag>out='window';</tag></item>
+          <item>door<tag>out='door';</tag></item>
+       </one-of>
+       
+     </rule>
+
+    <rule id="state">
+        <one-of>
+            <item>off<tag>out='off';</tag></item>
+            <item>on<tag>out='on'</tag></item>
+        </one-of>
+    </rule>
+</grammar>
+    
