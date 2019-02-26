@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<grammar version="1.0" tag-format="semantics/1.0" root="part2">
+<grammar version="1.0" tag-format="semantics/1.0" root ="commands">
     
     <rule id="action">
          <one-of>
@@ -10,7 +10,6 @@
     </rule>
 
     <rule id="object">
-       <item repeat="0-1">the</item>
        <one-of>
           <item>light</item>
           <item>heat></item>
@@ -22,7 +21,6 @@
     </rule>
 
     <rule id="unturnatbleObjects">
-        <item repeat="0-1">the</item>
         <one-of>
             <item>window</item>
             <item>door</item>
