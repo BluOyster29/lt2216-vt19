@@ -11,7 +11,7 @@
   <form id ="funnyQuotes">
     <field name="say">
       <prompt>Say one of the silly phrases</prompt>
-      <grammar src="grammars/lab2.xml:"/>
+      <grammar src="grammars/lab2_quotes.xml:"/>
     </field>
     <filled>
     <prompt>
