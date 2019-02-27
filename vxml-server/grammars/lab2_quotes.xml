@@ -2,8 +2,8 @@
 <grammar version="1.0" tag-format="semantics/1.0" root="quotes">
   <rule id="quotes">
     <one-of>
-      <item>To be is to do<tag>out="Socrates";</tag></item>
-      <item>To do is to be<tag>out="Sartra";</tag></item>
+      <item>To do is to be<tag>out="Socrates";</tag></item>
+      <item>To be is to do<tag>out="Sartra";</tag></item>
       <item>Do be do <tag>out="Sinatra";</tag></item>
     </one-of>
   </rule>
