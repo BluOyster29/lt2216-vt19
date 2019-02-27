@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <grammar version="1.0" tag-format="semantics/1.0" root="commands">
+  
+  <rule id= "commands">
+    <one-of>
+      <item><ruleref uri="#turning"/><ruleref uri="#onOf"/><ruleref uri="#turnableObjects"/><tag>out.action=rules.turning; out.state=rules.onOf; out.object=rules.turnableObjects;</tag></item>
+      <item><ruleref uri="#closeOpen"/><ruleref uri="#unTurnableObjects"/><tag>out.action=rules.closeOpen; out.object=rules.unTurnableObjects; out.state=rules.closeOpen;</tag></item>
+      <item><ruleref uri="#polite"/><ruleref uri="#commands"/></item>
+    </one-of>
+  </rule>
+  
   <rule id="unTurnableObjects">
       <item repeat="0-1">the</item>
       <one-of>
@@ -36,11 +45,11 @@
       </one-of>
   </rule>
 
-  <rule id= "commands">
-    <one-of>
-      <item><ruleref uri="#turning"/><ruleref uri="#onOf"/><ruleref uri="#turnableObjects"/><tag>out.action=rules.turning; out.state=rules.onOf; out.object=rules.turnableObjects;</tag></item>
-      <item><ruleref uri="#closeOpen"/><ruleref uri="#unTurnableObjects"/><tag>out.action=rules.closeOpen; out.object=rules.unTurnableObjects; out.state=rules.closeOpen;</tag></item>
-      
-    </one-of>
-  </rule>
+   <rule id="polite">
+       <one-of>
+           <item>please</item>
+       </one-of>
+   </rule>
+
+  
 </grammar>
