@@ -15,7 +15,9 @@
     </field>
     <filled>
       <prompt>
-        we did it
+        The object was: <value expr="something$.interpretation.object"/>
+        The Action was: <value expr="something$.interpretation.action"/>
+ 
       </prompt>>
     </filled>
   </form>

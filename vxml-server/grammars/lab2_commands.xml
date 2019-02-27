@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <grammar version="1.0" tag-format="semantics/1.0" root="commands">
   <rule id="object">
+      <one-of>
+          <item>the door</item>
+      </one-of>
+  </rule>
+  
+  <rule id="action">
+      <one-of>
+          <item>open</item>
+      </one-of>
+  </rule>
+
+  <rule id= "command">
+      <item><ruleref uri="#action"/><ruleref uri="#object"/><tag>out.action=rules.action; out.object=rules.object;</tag></item>
   </rule>
 </grammar>
