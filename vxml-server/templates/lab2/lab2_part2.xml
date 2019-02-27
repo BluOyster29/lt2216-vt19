@@ -56,8 +56,8 @@
 
   <form id="confirm">
     <field name="isCorrect">
-      <prompt bargein="False">You want to <value expr="something$.interpretation.action"/>
-          <value expr="something$.interpretation.object"/>. Is this correct?
+      <prompt bargein="False">You want to <value expr="action"/>
+          <value expr="object"/>. Is this correct?
       </prompt>
           <option>yes</option>
           <option>no</option>
@@ -65,10 +65,10 @@
           <assign name="isTrue" expr="isCorrect"/>
             
       <prompt bargein="False">
-        I will now <value expr="something$.interpretation.action"/> 
-        <value expr="something$.interpretation.state"/>
-        the <value expr="something$.interpretation.object"/>.
-        Thank you for saying <value expr="something$.interpretation.manners"/>.
+        I will now <value expr="action"/> 
+        <value expr="state"/>
+        the <value expr="object"/>.
+        Thank you for saying <value expr="manners"/>.
         Is this correct?
       </prompt>
            
@@ -84,13 +84,13 @@
   <form id="repeat">
     <field name="isCorrect">
       <prompt> <prompt>
-        I will now <value expr="something$.interpretation.action"/> <value expr="something$.interpretation.state"/>
-        the <value expr="something$.interpretation.object"/>.
-        The object was: <value expr="something$.interpretation.object"/>,
-        with a confidence level of <value expr="something$.confidence"/>,
-        The Action was: <value expr="something$.interpretation.action"/>,
-        And the state was: <value expr="something$.interpretation.state"/>,
-        Thank you for saying <value expr="something$.interpretation.manners"/>
+        I will now <value expr="action"/> <value expr="state"/>
+        the <value expr="object"/>.
+        The object was: <value expr="object"/>,
+        with a confidence level of <value expr="object.confidence"/>,
+        The Action was: <value expr="action"/>,
+        And the state was: <value expr="state"/>,
+        Thank you for saying <value expr="manners"/>
         </prompt></prompt>
     </field>
   </form>
