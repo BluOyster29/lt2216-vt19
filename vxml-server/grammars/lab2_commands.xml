@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <grammar version="1.0" tag-format="semantics/1.0" root="commands">
-  <rule id="object">
+  <rule id="commands">
       <one-of>
           <item>the door</item>
       </one-of>
