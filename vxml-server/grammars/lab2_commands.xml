@@ -50,8 +50,8 @@
   <rule id= "commands">
     <one-of>
       <item><ruleref uri="#turning"/><ruleref uri="#onOf"/><ruleref uri="#turnableObjects"/><tag>out.action=rules.turning; out.state=rules.onOf; out.object=rules.turnableObjects;out.manners=rules.polite;</tag></item>
-      <item><ruleref uri="#closeOpen"/><ruleref uri="#unTurnableObjects"/><tag>out.action=rules.closeOpen; out.object=rules.unTurnableObjects; out.state=rules.closeOpen; manners=rules.polite;</tag></item>
-      <item><ruleref uri="#polite"/><ruleref uri="#commands"/></item>
+      <item><ruleref uri="#closeOpen"/><ruleref uri="#unTurnableObjects"/><tag>out.action=rules.closeOpen; out.object=rules.unTurnableObjects; out.state=rules.closeOpen; </tag></item>
+      <item><ruleref uri="#polite"/><ruleref uri="#commands"/><tag>out.manners=rules.polite;</tag></item>
     </one-of>
   </rule>
 
