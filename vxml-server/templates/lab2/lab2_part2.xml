@@ -17,7 +17,18 @@
         <if cond="something$.confidence &lt; 0.3">
             <reprompt/>
         
-        <elseif cond="something$.confidence &gt; 0.31 &amp;&amp; cond=something$.confidence &lt; 0.4 "/>
+        <elseif cond="something$.confidence &gt; 0.42"/>
+          <prompt>
+        I will now <value expr="something$.interpretation.action"/> <value expr="something$.interpretation.state"/>
+        the <value expr="something$.interpretation.object"/>.
+        The object was: <value expr="something$.interpretation.object"/>,
+        with a confidence level of <value expr="something$.confidence"/>,
+        The Action was: <value expr="something$.interpretation.action"/>,
+        And the state was: <value expr="something$.interpretation.state"/>,
+        Thank you for saying <value expr="something$.interpretation.manners"/>
+        </prompt>
+
+        <else>
           <prompt>You want to <value expr="something$.interpretation.action"/>
           <value expr="something$.interpretation.object"/>. Is this correct?</prompt>
           <option>yes</option>
@@ -30,15 +41,8 @@
               <goto next="#test"/>
             
             </if>
-        <prompt>
-        I will now <value expr="something$.interpretation.action"/> <value expr="something$.interpretation.state"/>
-        the <value expr="something$.interpretation.object"/>.
-        The object was: <value expr="something$.interpretation.object"/>,
-        with a confidence level of <value expr="something$.confidence"/>,
-        The Action was: <value expr="something$.interpretation.action"/>,
-        And the state was: <value expr="something$.interpretation.state"/>,
-        Thank you for saying <value expr="something$.interpretation.manners"/>
-        </prompt>
+        </else>  
+        
         </if>
     </filled>
 
