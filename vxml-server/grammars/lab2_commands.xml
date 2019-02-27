@@ -1,20 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <grammar version="1.0" tag-format="semantics/1.0" root="commands">
-  <rule id="object">
+  <rule id="unTurnableObjects">
+      <item repeat="0-1">the</item>
       <one-of>
-          <item>the door</item>
+          <item>door</item>
+          <item>window</item>
       </one-of>
   </rule>
   
-  <rule id="action">
+  <rule id="turnableObjects">
       <one-of>
+          <item>A C<tag>out="Air conditioning";</tag></item>
+          <item>light</item>
+          <item>heat</item>
+      </one-of>
+  </rule>
+
+  <rule id="turning">
+      <one-of>
+          <item>turn</item>
+      </one-of>
+  </rule>
+
+  <rule id= "state">
+      <one-of>
+          <item>off</item>
           <item>open</item>
+          <item>close</item>
       </one-of>
   </rule>
 
   <rule id= "commands">
     <one-of>
-      <item><ruleref uri="#action"/><ruleref uri="#object"/><tag>out.action=rules.action; out.object=rules.object;</tag></item>
+      <item><ruleref uri="#turning"/><ruleref uri="#state"/><ruleref uri="#turnableObjects"/><tag>out.action=rules.action; out.state=rules.state; out.object=rules.object;</tag></item>
+      <item><ruleref uri="#state"/><ruleref uri="#unTurnableObjects"/><tag>out.action=rules.state; out.object=rules.unTurnableObject;</tag></item>
     </one-of>
   </rule>
 </grammar>
