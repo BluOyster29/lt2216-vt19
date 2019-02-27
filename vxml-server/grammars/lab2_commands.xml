@@ -3,37 +3,44 @@
   <rule id="unTurnableObjects">
       <item repeat="0-1">the</item>
       <one-of>
-          <item>door</item>
-          <item>window</item>
+          <item>door<tag>out="the door";</tag></item>
+          <item>window<tag>out="the window";</tag></item>
       </one-of>
   </rule>
   
   <rule id="turnableObjects">
       <one-of>
-          <item>A C<tag>out="Air conditioning";</tag></item>
-          <item>light</item>
-          <item>heat</item>
+          <item>A C<tag>out="The Air conditioning";</tag></item>
+          <item>light<tag>out="The light";</tag></item>
+          <item>heat<tag>out="The Heating";</tag></item>
       </one-of>
   </rule>
 
   <rule id="turning">
       <one-of>
-          <item>turn</item>
+          <item>turn<tag>out="turning";</tag></item>
       </one-of>
   </rule>
 
-  <rule id= "state">
+  <rule id= "onOf">
       <one-of>
           <item>off</item>
-          <item>open</item>
-          <item>close</item>
+          <item>on</item>
+      </one-of>
+  </rule>
+
+  <rule id="closeOpen">
+      <one-of>
+          <item>open<tag></tag></item>
+          <item>close<tag></tag></item>
       </one-of>
   </rule>
 
   <rule id= "commands">
     <one-of>
-      <item><ruleref uri="#turning"/><ruleref uri="#state"/><ruleref uri="#turnableObjects"/><tag>out.action=rules.turning; out.state=rules.state; out.object=rules.turnableObjects;</tag></item>
-      <item><ruleref uri="#state"/><ruleref uri="#unTurnableObjects"/><tag>out.action=rules.state; out.object=rules.unTurnableObject;</tag></item>
+      <item><ruleref uri="#turning"/><ruleref uri="#onOf"/><ruleref uri="#turnableObjects"/><tag>out.action=rules.turning; out.state=rules.onOf; out.object=rules.turnableObjects;</tag></item>
+      <item><ruleref uri="#closeOpen"/><ruleref uri="#unTurnableObjects"/><tag>out.action=rules.closeOpen; out.object=rules.unTurnableObject;</tag></item>
+      
     </one-of>
   </rule>
 </grammar>
