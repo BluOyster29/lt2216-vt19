@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <vxml version="2.0">
+
+<link next="lab1">
+  <grammar mode="voice" version="1.0" root="root">
+    <rule id="root" scope="public">
+       <one-of>
+         <item>main menu</item>
+	 <item> start over</item>
+       </one-of>
+    </rule>
+  </grammar>
+</link>
+
 <nomatch>
     I didn't understand.
   </nomatch>
@@ -29,12 +41,12 @@
         </prompt>
 
         <else/>
-          <prompt>You want to <value expr="something$.interpretation.action"/>
+          <prompt bargein="False">You want to <value expr="something$.interpretation.action"/>
           <value expr="something$.interpretation.object"/>. Is this correct?</prompt>
           <option>yes</option>
           <option>no</option>
           <if cond="option='yes'">
-            <prompt>I will now <value expr="something$.interpretation.action"/> <value expr="something$.interpretation.state"/>
+            <prompt bargein="False">I will now <value expr="something$.interpretation.action"/> <value expr="something$.interpretation.state"/>
             the <value expr="something$.interpretation.object"/>.
             Thank you for saying <value expr="something$.interpretation.manners"/></prompt>.
             Is this correct?
