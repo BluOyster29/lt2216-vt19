@@ -16,6 +16,7 @@
     <filled>
         <if cond="something$.confidence &lt; 0.3">
             <reprompt/>
+        
         <elseif cond="something$.confidence &gt; 0.31 | | cond=something$.confidence &lt; 0.4 "/>
           <prompt>You want to <value expr="something$.interpretation.action"/>
           <value expr="something$.interpretation.object"/>. Is this correct?</prompt>
@@ -25,9 +26,9 @@
             <prompt>I will now <value expr="something$.interpretation.action"/> <value expr="something$.interpretation.state"/>
             the <value expr="something$.interpretation.object"/>.
             Thank you for saying <value expr="something$.interpretation.manners"/></prompt>
-            <else>
+            <else/>
               <goto next="#test"/>
-            </else>
+            
             </if>
         <prompt>
         I will now <value expr="something$.interpretation.action"/> <value expr="something$.interpretation.state"/>
