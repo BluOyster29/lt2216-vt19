@@ -21,9 +21,26 @@
         with a confidence level of <value expr="something$.confidence"/>,
         And the state was: <value expr="something$.interpretation.state"/>,
         with a confidence level of <value expr="something$.confidence"/>.
+        <if cond="something$.confidence &lt; 0.4">
+          <throw event="nomatch"/>
+        <elseif cond="something$.confidence &lt; 0.6 ">
+          <prompt>You want to <value expr="something$.interpretation.action"/>
+          <value expr="something$.interpretation.object"/>. Is this correct?</prompt>
+          <option>yes</option>
+          <option>no</option>
+          <if cond="option='yes'">
+            <prompt>I will now <value expr="something$.interpretation.action"/> <value expr="something$.interpretation.state"/>
+            the <value expr="something$.interpretation.object"/>.
+            Thank you for saying <value expr="something$.interpretation.manners"/></prompt>
+            <else>
+              <goto next="#test"/>
+            </else>
+            </if>
+        </elseif>
         I will now <value expr="something$.interpretation.action"/> <value expr="something$.interpretation.state"/>
         the <value expr="something$.interpretation.object"/>.
         Thank you for saying <value expr="something$.interpretation.manners"/>
+        </if>
       </prompt>>
     </filled>
 
