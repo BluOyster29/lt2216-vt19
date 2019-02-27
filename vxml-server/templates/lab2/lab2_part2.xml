@@ -39,19 +39,13 @@
       <assign name="state" expr="something$.interpretation.state"/>
       <assign name="manners" expr="something$.interpretation.manners"/>
       <if cond="something$.confidence &lt; 0.3">
-            <reprompt/>
-        
+        <reprompt/> 
       <elsef cond="something$.confidence &gt; 0.42"/>
         <goto next="#repeat"/>
-         
-
       <else/>
         <goto next="#confirm"/>
-          
-            
-        </if>
+      </if>
     </filled>
-
   </form>
 
   <form id="confirm">
@@ -62,16 +56,7 @@
           <option>yes</option>
           <option>no</option>
       <filled>
-          <assign name="isTrue" expr="isCorrect"/>
-            
-      <prompt bargein="False">
-        I will now <value expr="action"/> 
-        <value expr="state"/>
-        the <value expr="object"/>.
-        Thank you for saying <value expr="manners"/>.
-        Is this correct?
-      </prompt>
-           
+          <assign name="isTrue" expr="isCorrect"/>   
       <if cond = "isCorrect =='yes'">
         <prompt> woohoo I am a smart robot </prompt>
       <else/>
