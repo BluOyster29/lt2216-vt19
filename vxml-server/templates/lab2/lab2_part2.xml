@@ -43,9 +43,12 @@
         <else/>
           <prompt bargein="False">You want to <value expr="something$.interpretation.action"/>
           <value expr="something$.interpretation.object"/>. Is this correct?</prompt>
+          <choice>
           <option>yes</option>
           <option>no</option>
-          <if cond="option='yes'">
+          </choice>
+
+          <if cond="choice='yes'">
             <prompt bargein="False">I will now <value expr="something$.interpretation.action"/> <value expr="something$.interpretation.state"/>
             the <value expr="something$.interpretation.object"/>.
             Thank you for saying <value expr="something$.interpretation.manners"/></prompt>.
