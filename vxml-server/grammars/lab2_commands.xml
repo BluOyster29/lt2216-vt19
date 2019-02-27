@@ -12,7 +12,4 @@
       </one-of>
   </rule>
 
-  <rule id= "commands">
-      <item><ruleref uri="#action"/><ruleref uri="#object"/><tag>out.action=rules.action; out.object=rules.object;</tag></item>
-  </rule>
 </grammar>
