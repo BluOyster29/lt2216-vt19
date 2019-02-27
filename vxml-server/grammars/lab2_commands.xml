@@ -32,7 +32,7 @@
 
   <rule id= "commands">
     <one-of>
-      <item><ruleref uri="#turning"/><ruleref uri="#state"/><ruleref uri="#turnableObjects"/><tag>out.action=rules.action; out.state=rules.state; out.object=rules.object;</tag></item>
+      <item><ruleref uri="#turning"/><ruleref uri="#state"/><ruleref uri="#turnableObjects"/><tag>out.action=rules.turning; out.state=rules.state; out.object=rules.turnableObjects;</tag></item>
       <item><ruleref uri="#state"/><ruleref uri="#unTurnableObjects"/><tag>out.action=rules.state; out.object=rules.unTurnableObject;</tag></item>
     </one-of>
   </rule>
