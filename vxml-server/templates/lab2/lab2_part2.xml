@@ -28,7 +28,7 @@
         Thank you for saying <value expr="something$.interpretation.manners"/>
         </prompt>
 
-        <else>
+        <else/>
           <prompt>You want to <value expr="something$.interpretation.action"/>
           <value expr="something$.interpretation.object"/>. Is this correct?</prompt>
           <option>yes</option>
@@ -39,10 +39,7 @@
             Thank you for saying <value expr="something$.interpretation.manners"/></prompt>
             <else/>
               <goto next="#test"/>
-            
             </if>
-        </else>  
-        
         </if>
     </filled>
 
