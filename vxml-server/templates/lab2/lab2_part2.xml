@@ -35,7 +35,7 @@
     </field>
     <filled>
       <assign name="action" expr="something$.interpretation.action"/>
-      <assign name="object" expr="something$.interpretation.action"/>
+      <assign name="object" expr="something$.interpretation.object"/>
       <assign name="state" expr="something$.interpretation.state"/>
       <assign name="manners" expr="something$.interpretation.manners"/>
       <if cond="something$.confidence &lt; 0.3">
