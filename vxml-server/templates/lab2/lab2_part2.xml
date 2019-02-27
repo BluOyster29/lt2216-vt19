@@ -21,10 +21,9 @@
         with a confidence level of <value expr="something$.confidence"/>,
         And the state was: <value expr="something$.interpretation.state"/>,
         with a confidence level of <value expr="something$.confidence"/>.
-     
-      
-        I will now <value expr="something$.interpretation.action"/> <value=expr="something$.interpretation.state"/>
-        the <value exr="something$.interpretation.object"/>
+        I will now <value expr="something$.interpretation.action"/> <value expr="something$.interpretation.state"/>
+        the <value expr="something$.interpretation.object"/>.
+        Thank you for saying <value expr="something$.interpretation.manners"/>
         
       </prompt>>
     </filled>
