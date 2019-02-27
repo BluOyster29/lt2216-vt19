@@ -14,13 +14,6 @@
       <grammar src="grammars/lab2_commands.xml"/>
     </field>
     <filled>
-      <prompt>
-        The object was: <value expr="something$.interpretation.object"/>,
-        with a confidence level of <value expr="something$.confidence"/>,
-        The Action was: <value expr="something$.interpretation.action"/>,
-        with a confidence level of <value expr="something$.confidence"/>,
-        And the state was: <value expr="something$.interpretation.state"/>,
-        with a confidence level of <value expr="something$.confidence"/>.
         <if cond="something$.confidence &lt; 0.4">
           <throw event="nomatch"/>
         <elseif cond="something$.confidence &lt; 0.6 ">
@@ -37,11 +30,18 @@
             </else>
             </if>
         </elseif>
+        <prompt>
         I will now <value expr="something$.interpretation.action"/> <value expr="something$.interpretation.state"/>
         the <value expr="something$.interpretation.object"/>.
+        The object was: <value expr="something$.interpretation.object"/>,
+        with a confidence level of <value expr="something$.confidence"/>,
+        The Action was: <value expr="something$.interpretation.action"/>,
+        with a confidence level of <value expr="something$.confidence"/>,
+        And the state was: <value expr="something$.interpretation.state"/>,
+        with a confidence level of <value expr="something$.confidence"/>.
         Thank you for saying <value expr="something$.interpretation.manners"/>
+        </prompt>
         </if>
-      </prompt>>
     </filled>
 
   </form>
