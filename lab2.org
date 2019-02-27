@@ -57,6 +57,8 @@ Your task here is to:
    Action was: <value expr="foo$.interpretation.action"/>
    #+END_SRC
 3. Now, you want to be able to be polite to your intelligent home, don't you? Add rule(s) that will allow you to start your utterances with an optional "please", as in "please close the door".
+
+
 4. Finally, your grammar most likely suffers from the problem that "open the air conditioning" is recognized. This is not optimal. Try to revise your grammar in a way that will fix this problem.
 * (VG part) Working with confidence threshold
 1. Does the recognition works fine? Try to get some situations when you get false acceptances and see what confidence scores did you get.

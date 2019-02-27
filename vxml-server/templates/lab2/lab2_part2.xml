@@ -15,15 +15,20 @@
     </field>
     <filled>
       <prompt>
-        The object was: <value expr="something$.interpretation.object"/>
+        The object was: <value expr="something$.interpretation.object"/>,
         with a confidence level of <value expr="something$.confidence"/>,
-        The Action was: <value expr="something$.interpretation.action"/>
+        The Action was: <value expr="something$.interpretation.action"/>,
         with a confidence level of <value expr="something$.confidence"/>,
-        And the state was: <value expr="something$.interpretation.state"/>
-        with a confidence level of <value expr="something$.confidence"/>
- 
+        And the state was: <value expr="something$.interpretation.state"/>,
+        with a confidence level of <value expr="something$.confidence"/>.
+     
+      
+        I will now <value expr="something$.interpretation.action"/> <value=expr="something$.interpretation.state"/>
+        the <value exr="something$.interpretation.object"/>
+        
       </prompt>>
     </filled>
+
   </form>
 
 </vxml>
