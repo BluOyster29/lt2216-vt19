@@ -15,10 +15,7 @@
     </field>
     <filled>
         <if cond="something$.confidence &lt; 0.3">
-          <prompt>
-            I did not understand
-          <goto next="#test"/>
-          </prompt>
+            <reprompt/>
         <elseif cond="something$.confidence &lt; 0.35 ">
           <prompt>You want to <value expr="something$.interpretation.action"/>
           <value expr="something$.interpretation.object"/>. Is this correct?</prompt>
