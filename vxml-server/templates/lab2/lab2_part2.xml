@@ -14,7 +14,7 @@
       <grammar src="grammars/lab2_commands.xml"/>
     </field>
     <filled>
-        <if cond="something$.confidence &lt; 0.4">
+        <if cond="something$.confidence &lt; 0.3">
           <throw event="nomatch"/>
           <goto next="#test"/>
         <elseif cond="something$.confidence &lt; 0.6 ">
