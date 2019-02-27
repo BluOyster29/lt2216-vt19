@@ -15,9 +15,11 @@
     </field>
     <filled>
         <if cond="something$.confidence &lt; 0.3">
-          <throw event="nomatch"/>
+          <block>
+            I did not understand
           <goto next="#test"/>
-        <elseif cond="something$.confidence &lt; 0.6 ">
+          </block>
+        <elseif cond="something$.confidence &lt; 0.35 ">
           <prompt>You want to <value expr="something$.interpretation.action"/>
           <value expr="something$.interpretation.object"/>. Is this correct?</prompt>
           <option>yes</option>
@@ -37,9 +39,7 @@
         The object was: <value expr="something$.interpretation.object"/>,
         with a confidence level of <value expr="something$.confidence"/>,
         The Action was: <value expr="something$.interpretation.action"/>,
-        with a confidence level of <value expr="something$.confidence"/>,
         And the state was: <value expr="something$.interpretation.state"/>,
-        with a confidence level of <value expr="something$.confidence"/>.
         Thank you for saying <value expr="something$.interpretation.manners"/>
         </prompt>
         </if>
