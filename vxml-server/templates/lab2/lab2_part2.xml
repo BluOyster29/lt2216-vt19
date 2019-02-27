@@ -17,7 +17,7 @@
         <if cond="something$.confidence &lt; 0.3">
             <reprompt/>
         
-        <elseif cond="something$.confidence &gt; 0.31 | | cond=something$.confidence &lt; 0.4 "/>
+        <elseif cond="something$.confidence &gt; 0.31 || cond=something$.confidence &lt; 0.4 "/>
           <prompt>You want to <value expr="something$.interpretation.action"/>
           <value expr="something$.interpretation.object"/>. Is this correct?</prompt>
           <option>yes</option>
