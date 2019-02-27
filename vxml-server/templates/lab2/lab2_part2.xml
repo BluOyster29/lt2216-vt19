@@ -16,11 +16,11 @@
     <filled>
       <prompt>
         The object was: <value expr="something$.interpretation.object"/>
-        with a confidence level of <value expr="something$.interpretation.confidence"/>,
+        with a confidence level of <value expr="something$.confidence"/>,
         The Action was: <value expr="something$.interpretation.action"/>
-        with a confidence level of <value expr="something$.interpretation.confidence"/>,
+        with a confidence level of <value expr="something$.confidence"/>,
         And the state was: <value expr="something$.interpretation.state"/>
-        with a confidence level of <value expr="something$.interpretation.confidence"/>
+        with a confidence level of <value expr="something$.confidence"/>
  
       </prompt>>
     </filled>
