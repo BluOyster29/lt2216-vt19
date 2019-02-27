@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <vxml version="2.0">
 
+
+<!-- data -->
+<var name="isTrue" />
+
 <link next="lab1">
   <grammar mode="voice" version="1.0" root="root">
     <rule id="root" scope="public">
@@ -26,11 +30,52 @@
       <grammar src="grammars/lab2_commands.xml"/>
     </field>
     <filled>
-        <if cond="something$.confidence &lt; 0.3">
+      <if cond="something$.confidence &lt; 0.3">
             <reprompt/>
         
-        <elseif cond="something$.confidence &gt; 0.42"/>
-          <prompt>
+      <elsef cond="something$.confidence &gt; 0.42"/>
+        <goto next="#repeat"/>
+         
+
+      <else/>
+        <goto next="#confirm"/>
+          
+            
+        </if>
+    </filled>
+
+  </form>
+
+  <form id="confirm">
+    <field name="isCorrect">
+      <prompt bargein="False">You want to <value expr="something$.interpretation.action"/>
+          <value expr="something$.interpretation.object"/>. Is this correct?
+      </prompt>
+          <option>yes</option>
+          <option>no</option>
+      <filled>
+          <assign name="isTrue" expr="isCorrect"/>
+            
+      <prompt bargein="False">
+        I will now <value expr="something$.interpretation.action"/> 
+        <value expr="something$.interpretation.state"/>
+        the <value expr="something$.interpretation.object"/>.
+        Thank you for saying <value expr="something$.interpretation.manners"/>.
+        Is this correct?
+      </prompt>
+           
+      <if cond = "isCorrect =='yes'">
+        <prompt> woohoo I am a smart robot </prompt>
+      <else/>
+        <goto next="#test"/>
+      </if>
+      </filled>   
+    </field>
+  </form>
+
+  <form id="repeat">
+    <field name="isCorrect">
+      <prompt> <prompt>
         I will now <value expr="something$.interpretation.action"/> <value expr="something$.interpretation.state"/>
         the <value expr="something$.interpretation.object"/>.
         The object was: <value expr="something$.interpretation.object"/>,
@@ -38,37 +83,7 @@
         The Action was: <value expr="something$.interpretation.action"/>,
         And the state was: <value expr="something$.interpretation.state"/>,
         Thank you for saying <value expr="something$.interpretation.manners"/>
-        </prompt>
-
-        <else/>
-          <prompt bargein="False">You want to <value expr="something$.interpretation.action"/>
-          <value expr="something$.interpretation.object"/>. Is this correct?</prompt>
-          <choice>
-          <option>yes</option>
-          <option>no</option>
-          </choice>
-
-          <if cond="choice='yes'">
-            <prompt bargein="False">I will now <value expr="something$.interpretation.action"/> <value expr="something$.interpretation.state"/>
-            the <value expr="something$.interpretation.object"/>.
-            Thank you for saying <value expr="something$.interpretation.manners"/></prompt>.
-            Is this correct?
-            <choice>
-            <option>yes</option>
-            <opyion>no</opyion>
-            </choice>
-            <if choice="yes">
-              <prompt> woohoo I am a smart robot </prompt>
-            <else/>
-              <reprompt/>
-
-            </if>
-            <else/>
-              <goto next="#test"/>
-            </if>
-        </if>
-    </filled>
-
+        </prompt></prompt>
+    </field>
   </form>
-
 </vxml>
