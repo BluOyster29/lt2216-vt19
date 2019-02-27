@@ -17,6 +17,7 @@
       <prompt>
         The object was: <value expr="something$.interpretation.object"/>
         The Action was: <value expr="something$.interpretation.action"/>
+        And the state was: <value expr="something$.interpretation.state"/>
  
       </prompt>>
     </filled>
