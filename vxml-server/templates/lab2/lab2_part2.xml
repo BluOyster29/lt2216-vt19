@@ -16,6 +16,7 @@
     <filled>
         <if cond="something$.confidence &lt; 0.4">
           <throw event="nomatch"/>
+          <goto next="#test"/>
         <elseif cond="something$.confidence &lt; 0.6 ">
           <prompt>You want to <value expr="something$.interpretation.action"/>
           <value expr="something$.interpretation.object"/>. Is this correct?</prompt>
