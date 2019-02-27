@@ -24,7 +24,6 @@
         I will now <value expr="something$.interpretation.action"/> <value expr="something$.interpretation.state"/>
         the <value expr="something$.interpretation.object"/>.
         Thank you for saying <value expr="something$.interpretation.manners"/>
-        
       </prompt>>
     </filled>
 
