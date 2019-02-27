@@ -40,7 +40,7 @@
       <assign name="manners" expr="something$.interpretation.manners"/>
       <if cond="something$.confidence &lt; 0.3">
         <reprompt/> 
-      <elsef cond="something$.confidence &gt; 0.42"/>
+      <elsef cond="something$.confidence &gt; 0.37"/>
         <goto next="#repeat"/>
       <else/>
         <goto next="#confirm"/>
@@ -51,7 +51,7 @@
   <form id="confirm">
     <field name="isCorrect">
       <prompt bargein="False">You want to <value expr="action"/>
-          <value expr="object"/>. Is this correct?
+          <value expr="object"/> <value expr="state"/>. Is this correct?
       </prompt>
           <option>yes</option>
           <option>no</option>
@@ -68,7 +68,7 @@
 
   <form id="repeat">
     <field name="isCorrect">
-      <prompt> <prompt>
+      <prompt>
         I will now <value expr="action"/> <value expr="state"/>
         the <value expr="object"/>.
         The object was: <value expr="object"/>,
@@ -76,7 +76,7 @@
         The Action was: <value expr="action"/>,
         And the state was: <value expr="state"/>,
         Thank you for saying <value expr="manners"/>
-        </prompt></prompt>
+        </prompt>
     </field>
   </form>
 </vxml>
