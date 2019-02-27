@@ -4,6 +4,10 @@
 
 <!-- data -->
 <var name="isTrue" />
+<var name="action"/>
+<var name="object"/>
+<var name="state"/>
+<var name="manners"/>
 
 <link next="lab1">
   <grammar mode="voice" version="1.0" root="root">
@@ -30,6 +34,10 @@
       <grammar src="grammars/lab2_commands.xml"/>
     </field>
     <filled>
+      <assign name="action" expr="something$.interpretation.action"/>
+      <assign name="object" expr="something$.interpretation.action"/>
+      <assign name="state" expr="something$.interpretation.state"/>
+      <assign name="manners" expr="something$.interpretation.manners"/>
       <if cond="something$.confidence &lt; 0.3">
             <reprompt/>
         
