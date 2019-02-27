@@ -41,6 +41,9 @@
    <rule id="polite">
        <one-of>
            <item>please</item>
+           <item>would you please</item>
+           <item>would you kindly</item>
+           <item>oi drongo!</item>
        </one-of>
    </rule>
 
@@ -51,5 +54,5 @@
       <item><ruleref uri="#polite"/><ruleref uri="#commands"/></item>
     </one-of>
   </rule>
-  
+
 </grammar>
