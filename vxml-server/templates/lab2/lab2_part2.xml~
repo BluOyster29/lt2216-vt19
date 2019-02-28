@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vxml version="2.0">
+
+<form id="commands">
+    <field name="something">
+      <prompt>What would you like to do?</prompt>
+      <grammar src="grammars/lab2.xml"/>
+    </field>
+    <filled>
+      <prompt>
+        Object was: <value expr="something$.interpretation.object"/>,
+        Action was: <value expr="something.interpretation.action"/>,
+        State was: <value expr="something.interpretation.state"/>
+      </prompt>>
+    </filled>
+  </form>
+
+</vxml>
