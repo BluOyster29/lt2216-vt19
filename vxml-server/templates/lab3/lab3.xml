@@ -4,7 +4,9 @@
     <block name="foo">
       <prompt>
         The <emphasis>biggest</emphasis> loser among the top 10 
-        <phoneme alphabet = "ipa" ph="krɪptokərənsiz">
+        <phoneme alphabet = "ipa" ph="k&#x006b; r&#x027E;I&#x026A;p&#x0070;
+        t&#x0074; o&#x006F; c&#x006b; u&#x0259; r&#x027E; e&#x0259; n&#x006E;
+        s&#x0073; i&#x0064; s&#x007A; ">
         cryptocurrencies</phoneme> is bitcoin cash (BCH), down 10.58 percent in the last 24 hours.
         It's also down 24.11 percent from the recent high of $1,641.40. 
         <break time="2s"/>
