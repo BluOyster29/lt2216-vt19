@@ -1,0 +1,29 @@
+<prosody rate="-15%"><amazon:breath duration="medium" volume="x-loud"/> 
+I have your <prosody pitch="+15%">calendar</prosody><prosody pitch="-20%"> open?
+<break strength="medium"/> </prosody></prosody>
+<amazon:breath duration="medium" volume="x-loud"/> 
+For what <prosody pitch="+40%">date? </prosody>
+<break strength="medium"/>
+
+<<prosody rate="-15%"><amazon:breath duration="medium" volume="x-loud"/> 
+I have your <prosody pitch="+15%">calendar</prosody><prosody pitch="-20%"> open?
+<break strength="medium"/> </prosody></prosody>
+
+<amazon:breath duration="medium" volume="x-loud"/> 
+For what <prosody pitch="+40%">date? </prosody>
+
+<break strength="medium"/>
+
+<amazon:breath duration="medium" volume="x-loud"/> <prosody pitch ="+20%">What </prosody><prosody pitch="0%" rate="x-slow">time </prosody>would you <emphasis>like</emphasis><prosody pitch="+40%"> to start?</prosody> 
+
+<break strength="medium"/> 
+prosody pitch ="+30%">What </prosody><prosody pitch="-10%">time </prosody>would you <emphasis>like</emphasis><prosody pitch="+40%"> to start?</prosody> 
+<break strength="medium"/> 
+
+<amazon:breath duration="long" volume="x-loud"/>
+<prosody rate="slow">How much </prosody><prosody pitch="+10%" rate="x-slow">time</prosody> do you <prosody rate ="x-slow">want</prosody> to <prosody pitch="+20%" rate ="x-slow">block out? </prosody>
+<break strength="medium"/> 
+
+<amazon:breath duration="x-long" volume="x-loud"/>
+<prosody pitch="-20%" >What shall we </prosody><prosody pitch="-20%">call this? </prosody>
+<break strength="medium"/> 
