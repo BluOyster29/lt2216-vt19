@@ -1,3 +1,4 @@
+<speak>
 <prosody rate="-15%"><amazon:breath duration="medium" volume="x-loud"/> 
 I have your <prosody pitch="+15%">calendar</prosody><prosody pitch="-20%"> open?
 <break strength="medium"/> </prosody></prosody>
@@ -27,3 +28,4 @@ prosody pitch ="+30%">What </prosody><prosody pitch="-10%">time </prosody>would 
 <amazon:breath duration="x-long" volume="x-loud"/>
 <prosody pitch="-20%" >What shall we </prosody><prosody pitch="-20%">call this? </prosody>
 <break strength="medium"/> 
+</speak>
