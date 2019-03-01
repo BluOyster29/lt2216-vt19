@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<grammar version="1.0" tag-format="semantics/1.0" root="commands">
+  
+  <rule id="statement">
+      <one-of>
+          <item>I would like to fly</item><tag>out="you want to fly"</tag>
+          <item>Could I fly</item><tag>out="you want to fly"</tag>
+          <item>Please can I fly</item><tag>out="you want to fly"</tag>
+      </one-of>
+  </rule>
+
+  <rule id="flyFrom">
+      <item repeat="0-1">the</item>
+      <one-of>
+          <item>from London</item>
+          <item>from Paris</item>
+          <item>from New York</item>
+          <item>from Earth</item>
+          <item>from Berlin</item>
+      </one-of>
+  </rule>
+  
+  <rule id= "flyTo">
+    <one-of>
+          <item>to London</item>
+          <item>to Paris</item>
+          <item>to New York</item>
+          <item>to Earth</item>
+          <item>to Berlin</item>
+      </one-of>
+  </rule>
+
+<rule id="booking">
+    <ruleref uri="#statement"/><ruleref uri="#flyFrom"/><ruleref uri="#flyTo"/>
+    <tag>out.satement=rules.statement; out.flyFrom=rules.flyFrom;out.flyTo=rules.flyTo;</tag>
+</rule>
+
+
+  <rule id="polite">
+       <one-of>
+           <item>please</item>
+           <item>would you please</item>
+           <item>would you kindly</item>
+           <item>oi drongo!</item>
+       </one-of>
+   </rule>
+
+</grammar>

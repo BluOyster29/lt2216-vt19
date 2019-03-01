@@ -1,7 +1,7 @@
 from flask import Flask, render_template, make_response, send_from_directory
 app = Flask(__name__)
 
-temp = '13'
+"""The following routes corrospond to folders in the 'templates' folder"""
 
 @app.route('/lab1')
 def lab1():
@@ -27,6 +27,13 @@ def lab2_part2():
 @app.route('/lab3')
 def lab3():
     vxml = render_template('lab3/lab3.xml')
+    response = make_response(vxml)
+    response.headers["Content-Type"] = "application/xml"
+    return response
+
+@app.route('/lab4')
+def lab4():
+    vxml = render_template('lab4/lab4.xml')
     response = make_response(vxml)
     response.headers["Content-Type"] = "application/xml"
     return response
