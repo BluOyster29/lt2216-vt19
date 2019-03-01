@@ -51,7 +51,7 @@
   <prompt>
     Main Menu, please choose from; flight booking service, delayed flights, or life advice.
   </prompt>
-  <choice next="#flight_booking">
+  <choice next="flight_booking">
     Flight booking service
   </choice>
   <choice next="delayed_flights">
