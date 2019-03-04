@@ -10,6 +10,15 @@
       </one-of>
   </rule>
   
+   <rule id="polite">
+      <one-of>
+          <item>please</item>
+          <item>would you please</item>
+          <item>would you kindly</item>
+          <item>oi drongo!</item>
+      </one-of>
+  </rule>
+  
   <rule id="turnableObjects">
       <one-of>
           <item>A C<tag>out="The Air conditioning";</tag></item>
@@ -46,13 +55,6 @@
     </one-of>
   </rule>
 
-  <rule id="polite">
-       <one-of>
-           <item>please</item>
-           <item>would you please</item>
-           <item>would you kindly</item>
-           <item>oi drongo!</item>
-       </one-of>
-   </rule>
+
 
 </grammar>
