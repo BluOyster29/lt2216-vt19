@@ -31,7 +31,6 @@
       </one-of>
   </rule>
 
-
   <rule id="number">
     <item repeat="0-1">the</item>
     <one-of>

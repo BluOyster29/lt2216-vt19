@@ -76,7 +76,6 @@
             <value expr="bookingSheet$.interpretation.flyTo"/>
             <value expr="bookingSheet$.interpretation.flyFrom"/>
             on <value expr="bookingSheet$.interpretation.number"/>
-            <value expr="bookingSheet$.interpretation.number"/>
             <value expr="bookingSheet$.interpretation.month"/>
             Is this correct?
         </prompt>
