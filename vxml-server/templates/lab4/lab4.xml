@@ -64,20 +64,23 @@
 
 <form id="flight_booking">
     <field name="bookingSheet">
-
         <prompt>
-            Where would you like to go?
+            Please answer the following.
+            Where would you like to fly and from where are you departing.
         </prompt>
-        <grammar src="grammars/lab4.xml"/>
+        <grammar src="grammars/lab4_grammar.xml"/>
     </field>
     <filled>
         <prompt>
             <value expr="bookingSheet$.interpretation.statement"/>
             <value expr="bookingSheet$.interpretation.flyTo"/>
             <value expr="bookingSheet$.interpretation.flyFrom"/>
-        </prompt>>
+            on <value expr="bookingSheet$.interpretation.number"/>
+            <value expr="bookingSheet$.interpretation.number"/>
+            <value expr="bookingSheet$.interpretation.month"/>
+            Is this correct?
+        </prompt>
     </filled>
-    
   </form>
 
   </vxml>
