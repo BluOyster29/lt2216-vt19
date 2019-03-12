@@ -47,21 +47,6 @@
           out.day=rules.day;
           out.number=rules.number;
           out.month=rules.month;
-          
-        </tag>
-      </item>
-      <item>
-        <ruleref uri="#statement"/>
-        <ruleref uri="#flyFrom"/>
-        <ruleref uri="#flyTo"/>
-        <ruleref uri="#month"/>
-        <rulref uri="#number"/>
-        <tag>
-          out.statement=rules.statement; 
-          out.flyFrom=rules.flyFrom;
-          out.flyTo=rules.flyTo;
-          out.month=rules.month;
-          out.number=rules.number;
         </tag>
       </item>
     </one-of>

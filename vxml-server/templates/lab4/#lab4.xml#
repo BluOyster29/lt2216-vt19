@@ -68,7 +68,7 @@
             Please answer the following.
             Where would you like to fly and from where are you departing.
         </prompt>
-        <grammar src="grammars/lab4.xml"/>
+        <grammar src="grammars/lab4"/>
     </field>
     <filled>
         <prompt>
