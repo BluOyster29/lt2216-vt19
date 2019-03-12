@@ -31,61 +31,6 @@
       </one-of>
   </rule>
 
-  <rule id="booking">
-    <one-of>
-      <item>
-        <ruleref uri="#statement"/>
-        <ruleref uri="#flyFrom"/>
-        <ruleref uri="#flyTo"/>
-        <rulref uri="#day"/>
-        <ruleref uri="#number"/>
-        <ruleref uri="#month"/>
-        <tag>
-          out.statement=rules.statement; 
-          out.flyFrom=rules.flyFrom;
-          out.flyTo=rules.flyTo;
-          out.day=rules.day;
-          out.number=rules.number;
-          out.month=rules.month;
-        </tag>
-      </item>
-    </one-of>
-  </rule>
-<!-- 
-<rule id="flightMeal">
-  <one-of>
-    <item>Vegetarian option</item>
-    <item>Vegan option</item>
-    <item>Meat option</item>
-  </one-of>
- </rule>
-
-<rule id ="planeType">
-  <one-of>
-    <item>Boeing 747</item>
-    <item>747<tag>out="Boeing 747";</tag></item>
-    <item>Conchord</item>
-    <item>Hot air balloon</item>
-    <item>Helicopter</item>
-  </one-of>
-</rule>
-
- <rule id="polite">
-   <one-of>
-     <item>please</item>
-     <item>would you please</item>
-     <item>would you kindly</item>
-     <item>oi drongo!</item>
-   </one-of>
-</rule>
-
-<rule id="insideOutsside">
-  <one-of>
-    <item>inside</item>
-    <item>outside</item>
-  </one-of>
-</rule>
--->
 
   <rule id="number">
     <item repeat="0-1">the</item>
@@ -151,5 +96,61 @@
         <item>Sunday</item>
     </one-of>
   </rule>
+
+  <rule id="booking">
+    <one-of>
+      <item>
+        <ruleref uri="#statement"/>
+        <ruleref uri="#flyFrom"/>
+        <ruleref uri="#flyTo"/>
+        <rulref uri="#day"/>
+        <ruleref uri="#number"/>
+        <ruleref uri="#month"/>
+        <tag>
+          out.statement=rules.statement; 
+          out.flyFrom=rules.flyFrom;
+          out.flyTo=rules.flyTo;
+          out.day=rules.day;
+          out.number=rules.number;
+          out.month=rules.month;
+        </tag>
+      </item>
+    </one-of>
+  </rule>
+<!-- 
+<rule id="flightMeal">
+  <one-of>
+    <item>Vegetarian option</item>
+    <item>Vegan option</item>
+    <item>Meat option</item>
+  </one-of>
+ </rule>
+
+<rule id ="planeType">
+  <one-of>
+    <item>Boeing 747</item>
+    <item>747<tag>out="Boeing 747";</tag></item>
+    <item>Conchord</item>
+    <item>Hot air balloon</item>
+    <item>Helicopter</item>
+  </one-of>
+</rule>
+
+ <rule id="polite">
+   <one-of>
+     <item>please</item>
+     <item>would you please</item>
+     <item>would you kindly</item>
+     <item>oi drongo!</item>
+   </one-of>
+</rule>
+
+<rule id="insideOutsside">
+  <one-of>
+    <item>inside</item>
+    <item>outside</item>
+  </one-of>
+</rule>
+-->
 
 </grammar>
