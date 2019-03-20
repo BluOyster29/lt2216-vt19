@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <grammar version="1.0" tag-format="semantics/1.0" root="booking">
   
+  <rule id="root" scope="public">
+    <item>
+      <ruleref uri="#toFrom"/>
+      <ruleref uri="#date"/>
+      <tag>
+        out.toFrom = rules.toFrom;
+        out.date = rules.date;
+      </tag>
+    </item>
+  </rule>
+  
+  <rule id="toFrom">
+    <item>
+      <ruleref uri="#statement"/>
+      <ruleref uri ="#flyFrom"/>
+      <ruleref uri ="#flyTo"/>
+      <tag>
+        out.statement = rules.statement;
+        out.flyFrom = rules.flyFrom;
+        out.flyTo = rules.flyTo;
+      </tag>
+    </item>
+  </rule>
+
+  <rule id = "date">
+    <one-of>
+      <item>
+          <rulref uri="#day"/>
+          <ruleref uri="#number"/>
+          <ruleref uri="#month"/>
+          <tag>
+            out.day = rules.day;
+            out.number = rules.number;
+            out.month = rules.month;
+          </tag>
+      </item>
+      <item>
+        <ruleref uri="#month"/>
+        <rulref uri="#number"/>
+      </item>
+      <tag>
+        out.month = rules.month;
+        out.number = rules.mumber;
+      </tag>
+      </one-of>
+  </rule>
+
   <rule id="statement">
       <one-of>
           <item>I would like to fly<tag>out="you want to fly";</tag></item>
@@ -96,27 +143,33 @@
     </one-of>
   </rule>
 
-  <rule id="booking">
-    <one-of>
+  <rule id="toFrom">
       <item>
         <ruleref uri="#statement"/>
         <ruleref uri="#flyFrom"/>
         <ruleref uri="#flyTo"/>
-        <rulref uri="#day"/>
-        <ruleref uri="#number"/>
-        <ruleref uri="#month"/>
         <tag>
           out.statement=rules.statement; 
           out.flyFrom=rules.flyFrom;
           out.flyTo=rules.flyTo;
-          out.day=rules.day;
-          out.number=rules.number;
-          out.month=rules.month;
         </tag>
       </item>
-    </one-of>
   </rule>
-<!-- 
+
+  <rule id="dates">
+    <item>
+      <rulref uri="#day"/>
+      <ruleref uri="#number"/>
+      <ruleref uri="#month"/>
+      <tag>
+        out.day=rules.day;
+        out.number=rules.number;
+        out.month=rules.month;
+      </tag>
+      
+    </item>
+  </rule>
+
 <rule id="flightMeal">
   <one-of>
     <item>Vegetarian option</item>
@@ -150,6 +203,5 @@
     <item>outside</item>
   </one-of>
 </rule>
--->
 
 </grammar>
