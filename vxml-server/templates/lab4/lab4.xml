@@ -77,6 +77,8 @@
             <value expr="bookingSheet$.interpretation.flyFrom"/>
             to
             <value expr="bookingSheet$.interpretation.flyTo"/>
+            on the 
+            <value expr="bookingSheet$.interpretation.flyTo"/>
             
         </prompt>
     </filled>

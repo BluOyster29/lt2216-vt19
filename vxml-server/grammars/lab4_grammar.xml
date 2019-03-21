@@ -29,7 +29,7 @@
         <tag>out.flyTo = rules.flyTo;</tag>
       </item>
       <item>
-        <ruleref uri="#data"/>
+        <ruleref uri="#date"/>
         <tag>out.date = rules.date</tag>
       </item>
   </rule>
