@@ -62,36 +62,39 @@
 -->
 
 <form id="flightBooking">
-    <field name="bookingSheet">
-        <prompt>
-            Please answer the following.
-            Where would you like to fly and from where are you departing.
-        </prompt>
-        <grammar src="grammars/lab4_grammar.xml"/>
-    </field>
-    <filled>
-        <prompt>
-            nice!
-            <value expr="bookingSheet$.interpretation.statement"/>
-            from
-            <value expr="bookingSheet$.interpretation.flyFrom"/>
-            to
-            <value expr="bookingSheet$.interpretation.flyTo"/>
-            on the 
-            <value expr="bookingSheet$.interpretation.number"/>
-            of 
-            <value expr="bookingSheet$.interpretation.month"/>
-            <goto next="#confirmation"/>        
-            </prompt>
-    </filled>
-    <field name="confirmation">
+  <field name="bookingSheet">
+      <prompt>
+          Please answer the following.
+          Where would you like to fly and from where are you departing.
+      </prompt>
+      <grammar src="grammars/lab4_grammar.xml"/>
+  </field>
+  <filled>
+      <prompt>
+          nice!
+          <value expr="bookingSheet$.interpretation.statement"/>
+          from
+          <value expr="bookingSheet$.interpretation.flyFrom"/>
+          to
+          <value expr="bookingSheet$.interpretation.flyTo"/>
+          on the 
+          <value expr="bookingSheet$.interpretation.number"/>
+          of 
+          <value expr="bookingSheet$.interpretation.month"/>
+          <goto next="#confirmation"/>        
+          </prompt>
+  </filled>
+  </form>
+
+  <form id ="confirmation">
+    <field name="con">
       <prompt>
         Is that Correct?      
       </prompt>
       <option>yes</option>
       <option>No</option>
       <filled>
-        <assign name="confirma" expr="confirmation"/>
+        <assign name="confirma" expr="con"/>
         <if cond="confirm =='yes'">
           <goto next = "#extras"/>
         <else>
@@ -105,4 +108,11 @@
     </field>
   </form>
 
+  <form id="extras">
+    <field id="optionals">
+      <prompt>
+        Please answer the following
+      </prompt>
+    </field>
+  </form>
   </vxml>
