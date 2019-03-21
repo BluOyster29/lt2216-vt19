@@ -12,7 +12,7 @@
     </item>
   </rule>
   
-  <rule id="toFrom">
+  <rule id="toFrom" scope="pubilc">
     <item>
       <ruleref uri="#statement"/>
       <ruleref uri ="#flyFrom"/>
@@ -24,7 +24,7 @@
       </tag>
     </item>
   </rule>
-  <!--
+  
   <rule id = "date">
     <one-of>
       <item>
@@ -53,7 +53,7 @@
           <item>I would like to fly<tag>out="you want to fly";</tag></item>
           <item>Could I fly<tag>out="you want to fly";</tag></item>
           <item>Please can I fly<tag>out="you want to fly";</tag></item>
-          <item>fly<tag>out"you want to fly";</tag></item>
+          <item>fly<tag>out="you want to fly";</tag></item>
       </one-of>
   </rule>
 
@@ -143,19 +143,6 @@
     </one-of>
   </rule>
 
-  <rule id="toFrom">
-      <item>
-        <ruleref uri="#statement"/>
-        <ruleref uri="#flyFrom"/>
-        <ruleref uri="#flyTo"/>
-        <tag>
-          out.statement=rules.statement; 
-          out.flyFrom=rules.flyFrom;
-          out.flyTo=rules.flyTo;
-        </tag>
-      </item>
-  </rule>
-
   <rule id="dates">
     <item>
       <rulref uri="#day"/>
@@ -170,38 +157,38 @@
     </item>
   </rule>
 
-<rule id="flightMeal">
-  <one-of>
-    <item>Vegetarian option</item>
-    <item>Vegan option</item>
-    <item>Meat option</item>
-  </one-of>
- </rule>
+  <rule id="flightMeal">
+    <one-of>
+      <item>Vegetarian option</item>
+      <item>Vegan option</item>
+      <item>Meat option</item>
+    </one-of>
+  </rule>
 
-<rule id ="planeType">
-  <one-of>
-    <item>Boeing 747</item>
-    <item>747<tag>out="Boeing 747";</tag></item>
-    <item>Conchord</item>
-    <item>Hot air balloon</item>
-    <item>Helicopter</item>
-  </one-of>
-</rule>
+  <rule id ="planeType">
+    <one-of>
+      <item>Boeing 747</item>
+      <item>747<tag>out="Boeing 747";</tag></item>
+      <item>Conchord</item>
+      <item>Hot air balloon</item>
+      <item>Helicopter</item>
+    </one-of>
+  </rule>
 
- <rule id="polite">
-   <one-of>
-     <item>please</item>
-     <item>would you please</item>
-     <item>would you kindly</item>
-     <item>oi drongo!</item>
-   </one-of>
-</rule>
+  <rule id="polite">
+    <one-of>
+      <item>please</item>
+      <item>would you please</item>
+      <item>would you kindly</item>
+      <item>oi drongo!</item>
+    </one-of>
+  </rule>
 
-<rule id="insideOutsside">
-  <one-of>
-    <item>inside</item>
-    <item>outside</item>
-  </one-of>
-</rule>
--->
+  <rule id="insideOutsside">
+    <one-of>
+      <item>inside</item>
+      <item>outside</item>
+    </one-of>
+  </rule>
+
 </grammar>
