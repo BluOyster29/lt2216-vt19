@@ -25,7 +25,7 @@
   </noinput>
 
   <!-- Data model -->
-  <var name="from" />
+  <var name="confirm" />
   <var name="to" />
   <var name="when"/>
   <var name="isRetrun"/>
@@ -81,9 +81,28 @@
             <value expr="bookingSheet$.interpretation.number"/>
             of 
             <value expr="bookingSheet$.interpretation.month"/>
-            
-        </prompt>
+            <goto next="#confirmation"/>        
+            </prompt>
     </filled>
+    <field name="confirmation">
+      <prompt>
+        Is that Correct?      
+      </prompt>
+      <option>yes</option>
+      <option>No</option>
+      <filled>
+        <assign name="confirma" expr="confirmation"/>
+        <if cond="confirm =='yes'">
+          <goto next = "#extras"/>
+        <else>
+          <prompt>
+            We will try again
+          </prompt>
+          <goto next="#bookingSheet"/>
+        </else>
+        </if>
+      </filled>
+    </field>
   </form>
 
   </vxml>

@@ -198,4 +198,11 @@
       <item>outside</item>
     </one-of>
   </rule>
+
+  <rule id="yesNo">
+    <one-of>
+      <item>Yes</item>
+      <item>No</item>
+    </one-of>
+  </rule>
 </grammar>
