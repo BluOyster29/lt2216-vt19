@@ -26,11 +26,10 @@
 
   <!-- Data model -->
   <var name="confirm" />
-  <var name="depart" />
-  <var name="arrival"/>
-  <var name="isRetrun"/>
-  <var name="correct"/>
-  <var name="returnDay"/>
+  <var name="food" />
+  <var name="seat"/>
+  <var name="model"/>
+
 
   <!-- State machine -->
   <form id="welcome">
@@ -132,12 +131,20 @@
       </prompt>
       <grammar src="grammars/lab4_grammar.xml#flightMeal"/>
     </field>
+    <filled>
+      <assign name="food" expr="meal"/>
+    </filled>
+
     <field id="insideOutside">
       <prompt>
         Would you like to sit inside our oustide the plane?
       </prompt>
       <grammar src="grammars/lab4_grammar.xml#insideOutside"/>
     </field>
+    <filled>
+      <assign name="seat" expr="insideOutside"/>
+    </filled>
+
     <field id="plane">
       <prompt>
         What make of plane would you like.
@@ -149,11 +156,15 @@
       <grammar src="grammars/lab4_grammar.xml#planeType"/>
     </field>
     <filled>
+      <assign name="model" expr="plane"/>
+    </filled>
+
+    <filled>
       <prompt>
         Your Extras are as follows, you are having the 
-        <value expr="meal$.interpretation.flightMeal"/> and you are 
-        traveling by <value expr="plane.interpretation.planeType"/>
-        <if cond="insideOutside$.interpretation.insideOutside = 'outside'">
+        <value expr="food"/> and you are 
+        traveling by <value expr="model"/>
+        <if cond="seat = 'outside'">
           <prompt>
             and you are strangely enough sitting on the outside, good luck with that
           </prompt>
@@ -161,9 +172,9 @@
           <prompt>
             And luckily you are sitting inside the plane.
           </prompt>
-        
         </if>
       </prompt>
     </filled>
   </form>
+
 </vxml>

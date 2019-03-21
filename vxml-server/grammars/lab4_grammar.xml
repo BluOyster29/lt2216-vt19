@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <grammar version="1.0" tag-format="semantics/1.0" root="toFrom">
-  
-  <!--
-  <rule id="root" scope="public">
-    <item>
-      <ruleref uri="#toFrom"/>
-      <ruleref uri="#date"/>
-      <tag>
-        out.toFrom = rules.toFrom;
-        out.date = rules.date;
-      </tag>
-    </item>
-  </rule>
-  -->
+
   <rule id="toFrom" scope="public">
       <item>
         <ruleref uri="#statement"/>
@@ -69,23 +57,6 @@
       </one-of>
   </rule>
 
-  <!--
-  <rule id = "date" scope ="public">
-    <item>
-      <rulref uri="#day"/>
-      <tag>out.day = rules.day;</tag>
-    </item>
-    <item>
-      <ruleref uri="#number"/>
-      <tag>out.number = rules.number;</tag>
-    </item>
-    <item>
-      <ruleref uri="#month"/>
-      <tag>out.month = rules.month;</tag>
-    </item>
-  </rule>
-  -->
-
   <rule id="number" scope ="public">
     <item repeat="0-1">the</item>
     <one-of>
@@ -138,33 +109,7 @@
         <item>December</item>
     </one-of>
   </rule>
-  <!--
-  <rule id="day" scope ="public">
-    <one-of>
-        <item>Monday</item>
-        <item>Tuesday</item>
-        <item>Wednesday</item>
-        <item>Thursday</item>
-        <item>Friday</item>
-        <item>Saturday</item>
-        <item>Sunday</item>
-    </one-of>
-  </rule>
 
-  <rule id="dates" scope ="public">
-    <item>
-      <rulref uri="#day"/>
-      <ruleref uri="#number"/>
-      <ruleref uri="#month"/>
-      <tag>
-        out.day=rules.day;
-        out.number=rules.number;
-        out.month=rules.month;
-      </tag>
-      
-    </item>
-  </rule>
-  -->
   <rule id="flightMeal" scope ="public">
     <one-of>
       <item>Vegetarian option<tag>out="veggie option";</tag></item>
@@ -196,4 +141,5 @@
       <item>No</item>
     </one-of>
   </rule>
+  
 </grammar>
