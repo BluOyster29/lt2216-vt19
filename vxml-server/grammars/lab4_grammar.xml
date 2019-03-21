@@ -14,7 +14,6 @@
   </rule>
   -->
   <rule id="toFrom" scope="public">
-    <one-of>
       <item>
         <ruleref uri="#statement"/>
         <tag>out.statement = rules.statement;</tag>
@@ -29,7 +28,6 @@
         <ruleref uri ="#flyTo"/>
         <tag>out.flyTo = rules.flyTo;</tag>
       </item>
-    </one-of>
   </rule>
   
   <rule id="statement" scope ="public">
