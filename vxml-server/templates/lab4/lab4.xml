@@ -72,7 +72,7 @@
       <grammar src="grammars/lab4_grammar.xml"/>
   </field>
   <filled>
-    <if cond="'bookingSheet$.interpretation.flyFrom' == 'bookingSheet$.interpretation.flyTo'">
+    <if cond="bookingSheet$.interpretation.flyFrom' == 'bookingSheet$.interpretation.flyTo">
       <prompt>
         Your destination and departure can not be the same. Try again
       </prompt>
