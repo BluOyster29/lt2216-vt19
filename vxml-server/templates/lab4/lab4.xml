@@ -73,8 +73,11 @@
         <prompt>
             nice!
             <value expr="bookingSheet$.interpretation.statement"/>
+            from
             <value expr="bookingSheet$.interpretation.flyFrom"/>
+            to
             <value expr="bookingSheet$.interpretation.flyTo"/>
+            
         </prompt>
     </filled>
   </form>

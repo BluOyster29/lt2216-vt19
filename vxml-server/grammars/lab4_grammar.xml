@@ -28,6 +28,10 @@
         <ruleref uri ="#flyTo"/>
         <tag>out.flyTo = rules.flyTo;</tag>
       </item>
+      <item>
+        <ruleref uri="#data"/>
+        <tag>out.date = rules.date</tag>
+      </item>
   </rule>
   
   <rule id="statement" scope ="public">
@@ -61,28 +65,19 @@
       </one-of>
   </rule>
 
-<!--
   <rule id = "date" scope ="public">
-    <one-of>
-      <item>
-          <rulref uri="#day"/>
-          <ruleref uri="#number"/>
-          <ruleref uri="#month"/>
-          <tag>
-            out.day = rules.day;
-            out.number = rules.number;
-            out.month = rules.month;
-          </tag>
-      </item>
-      <item>
-        <ruleref uri="#month"/>
-        <rulref uri="#number"/>
-      </item>
-      <tag>
-        out.month = rules.month;
-        out.number = rules.mumber;
-      </tag>
-      </one-of>
+    <item>
+      <rulref uri="#day"/>
+      <tag>out.day = rules.day;</tag>
+    </item>
+    <item>
+      <ruleref uri="#number"/>
+      <tag>out.number = rules.number;</tag>
+    </item>
+    <item>
+      <ruleref uri="#month"/>
+      <tag>out.month = rules.month;</tag>
+    </item>
   </rule>
 
   <rule id="number" scope ="public">
@@ -197,5 +192,4 @@
       <item>outside</item>
     </one-of>
   </rule>
--->
 </grammar>
