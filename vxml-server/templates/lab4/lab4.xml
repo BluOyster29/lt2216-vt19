@@ -167,7 +167,32 @@
           </prompt>
         </if>
       </prompt>
+      <goto next="#confirmation2"/>
     </filled>
   </form>
 
+  <form id ="confirmation2">
+    <field name="con2">
+      <prompt>
+        Is that Correct?      
+      </prompt>
+      <option>yes</option>
+      <option>No</option>
+      <filled>
+        <assign name="confirm" expr="con2"/>
+        <if cond="confirm =='yes'">
+          <prompt>
+            Brilliant! Thank you for flying with Altered Beast, have a nice day.
+          </prompt>
+          
+        <else>
+          <prompt>
+            Oh no, better try input those extras again!
+          </prompt>
+          <goto next="#extras"/>
+        </else>
+        </if>
+      </filled>
+    </field>
+  </form>
 </vxml>
