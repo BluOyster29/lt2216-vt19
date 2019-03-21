@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <grammar version="1.0" tag-format="semantics/1.0" root="toFrom">
   
+  <!--
   <rule id="root" scope="public">
     <item>
       <ruleref uri="#toFrom"/>
@@ -11,7 +12,7 @@
       </tag>
     </item>
   </rule>
-  
+  -->
   <rule id="toFrom" scope="pubilc">
     <item>
       <ruleref uri="#statement"/>
@@ -25,7 +26,39 @@
     </item>
   </rule>
   
-  <rule id = "date" scope ="publics">
+  <rule id="statement" scope ="public">
+      <one-of>
+          <item>I would like to fly<tag>out="you want to fly";</tag></item>
+          <item>Could I fly<tag>out="you want to fly";</tag></item>
+          <item>Please can I fly<tag>out="you want to fly";</tag></item>
+          <item>fly<tag>out="you want to fly";</tag></item>
+      </one-of>
+  </rule>
+
+  <rule id="flyFrom" scope ="public">
+      <item repeat="0-1">from</item>
+      <one-of>
+          <item>London</item>
+          <item>Paris</item>
+          <item>New York</item>
+          <item>Earth</item>
+          <item>Berlin</item>
+      </one-of>
+  </rule>
+  
+  <rule id= "flyTo" scope ="public">
+    <item repeat="0-1">to</item>
+    <one-of>
+          <item>London</item>
+          <item>Paris</item>
+          <item>New York</item>
+          <item>Earth</item>
+          <item>Berlin</item>
+      </one-of>
+  </rule>
+
+<!--
+  <rule id = "date" scope ="public">
     <one-of>
       <item>
           <rulref uri="#day"/>
@@ -48,38 +81,7 @@
       </one-of>
   </rule>
 
-  <rule id="statement" scope ="publics">
-      <one-of>
-          <item>I would like to fly<tag>out="you want to fly";</tag></item>
-          <item>Could I fly<tag>out="you want to fly";</tag></item>
-          <item>Please can I fly<tag>out="you want to fly";</tag></item>
-          <item>fly<tag>out="you want to fly";</tag></item>
-      </one-of>
-  </rule>
-
-  <rule id="flyFrom" scope ="publics">
-      <item repeat="0-1">from</item>
-      <one-of>
-          <item>London</item>
-          <item>Paris</item>
-          <item>New York</item>
-          <item>Earth</item>
-          <item>Berlin</item>
-      </one-of>
-  </rule>
-  
-  <rule id= "flyTo" scope ="publics">
-    <item repeat="0-1">to</item>
-    <one-of>
-          <item>London</item>
-          <item>Paris</item>
-          <item>New York</item>
-          <item>Earth</item>
-          <item>Berlin</item>
-      </one-of>
-  </rule>
-
-  <rule id="number" scope ="publics">
+  <rule id="number" scope ="public">
     <item repeat="0-1">the</item>
     <one-of>
         <item>first</item>
@@ -114,7 +116,7 @@
     </one-of>
   </rule>
 
-  <rule id="month" scope ="publics">
+  <rule id="month" scope ="public">
     <item repeat="0-1">of</item>
     <one-of>
         <item>January</item>
@@ -132,7 +134,7 @@
     </one-of>
   </rule>
 
-  <rule id="day" scope ="publics">
+  <rule id="day" scope ="public">
     <one-of>
         <item>Monday</item>
         <item>Tuesday</item>
@@ -144,7 +146,7 @@
     </one-of>
   </rule>
 
-  <rule id="dates" scope ="publics">
+  <rule id="dates" scope ="public">
     <item>
       <rulref uri="#day"/>
       <ruleref uri="#number"/>
@@ -158,7 +160,7 @@
     </item>
   </rule>
 
-  <rule id="flightMeal" scope ="publics">
+  <rule id="flightMeal" scope ="public">
     <one-of>
       <item>Vegetarian option</item>
       <item>Vegan option</item>
@@ -166,7 +168,7 @@
     </one-of>
   </rule>
 
-  <rule id ="planeType" scope ="publics">
+  <rule id ="planeType" scope ="public">
     <one-of>
       <item>Boeing 747</item>
       <item>747<tag>out="Boeing 747";</tag></item>
@@ -176,7 +178,7 @@
     </one-of>
   </rule>
 
-  <rule id="polite" scope ="publics">
+  <rule id="polite" scope ="public">
     <one-of>
       <item>please</item>
       <item>would you please</item>
@@ -185,11 +187,11 @@
     </one-of>
   </rule>
 
-  <rule id="insideOutsside" scope ="publics">
+  <rule id="insideOutsside" scope ="public">
     <one-of>
       <item>inside</item>
       <item>outside</item>
     </one-of>
   </rule>
-
+-->
 </grammar>

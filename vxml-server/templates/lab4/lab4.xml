@@ -8,11 +8,11 @@
     <rule id="root" scope="public">
        <one-of>
          <item>main menu</item>
-	 <item> start over</item>
+	        <item> start over</item>
        </one-of>
     </rule>
   </grammar>
-</link>
+  </link>
 
   <nomatch>
     I didn't understand, try talking with an American accent.
@@ -37,11 +37,8 @@
     <block>
       
       <prompt>
-	<audio src="https://instaud.io/_/3hLZ.wav"/>
-	<break time="2000" />
-	
-	Welcome to The Altered Beast flight booking service.
-
+	    <break time="2000" />
+	      Welcome to The Altered Beast flight booking service
       </prompt>
       <goto next="#flightBooking"/>
     </block>
@@ -63,6 +60,7 @@
   </choice>
 </menu>
 -->
+
 <form id="flightBooking">
     <field name="bookingSheet">
         <prompt>
@@ -74,6 +72,9 @@
     <filled>
         <prompt>
             nice!
+            <value expr="bookingSheet$.statement"/>
+            <value expr="bookingSheet$.flyFrom"/>
+            <value expr="bookingSheet$.flyTo"/>
         </prompt>
     </filled>
   </form>
