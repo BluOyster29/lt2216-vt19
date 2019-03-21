@@ -24,7 +24,7 @@
       </tag>
     </item>
   </rule>
-
+  <!--
   <rule id = "date">
     <one-of>
       <item>
@@ -203,5 +203,5 @@
     <item>outside</item>
   </one-of>
 </rule>
-
+-->
 </grammar>
