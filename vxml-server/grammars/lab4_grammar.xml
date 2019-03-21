@@ -69,6 +69,7 @@
       </one-of>
   </rule>
 
+  <!--
   <rule id = "date" scope ="public">
     <item>
       <rulref uri="#day"/>
@@ -83,6 +84,7 @@
       <tag>out.month = rules.month;</tag>
     </item>
   </rule>
+  -->
 
   <rule id="number" scope ="public">
     <item repeat="0-1">the</item>
@@ -136,7 +138,7 @@
         <item>December</item>
     </one-of>
   </rule>
-
+  <!--
   <rule id="day" scope ="public">
     <one-of>
         <item>Monday</item>
@@ -162,7 +164,7 @@
       
     </item>
   </rule>
-
+  -->
   <rule id="flightMeal" scope ="public">
     <one-of>
       <item>Vegetarian option</item>
