@@ -25,7 +25,7 @@
     </item>
   </rule>
   
-  <rule id = "date">
+  <rule id = "date" scope ="publics">
     <one-of>
       <item>
           <rulref uri="#day"/>
@@ -48,7 +48,7 @@
       </one-of>
   </rule>
 
-  <rule id="statement">
+  <rule id="statement" scope ="publics">
       <one-of>
           <item>I would like to fly<tag>out="you want to fly";</tag></item>
           <item>Could I fly<tag>out="you want to fly";</tag></item>
@@ -57,28 +57,29 @@
       </one-of>
   </rule>
 
-  <rule id="flyFrom">
-      <item repeat="0-1">the</item>
+  <rule id="flyFrom" scope ="publics">
+      <item repeat="0-1">from</item>
       <one-of>
-          <item>from London</item>
-          <item>from Paris</item>
-          <item>from New York</item>
-          <item>from Earth</item>
-          <item>from Berlin</item>
+          <item>London</item>
+          <item>Paris</item>
+          <item>New York</item>
+          <item>Earth</item>
+          <item>Berlin</item>
       </one-of>
   </rule>
   
-  <rule id= "flyTo">
+  <rule id= "flyTo" scope ="publics">
+    <item repeat="0-1">to</item>
     <one-of>
-          <item>to London</item>
-          <item>to Paris</item>
-          <item>to New York</item>
-          <item>to Earth</item>
-          <item>to Berlin</item>
+          <item>London</item>
+          <item>Paris</item>
+          <item>New York</item>
+          <item>Earth</item>
+          <item>Berlin</item>
       </one-of>
   </rule>
 
-  <rule id="number">
+  <rule id="number" scope ="publics">
     <item repeat="0-1">the</item>
     <one-of>
         <item>first</item>
@@ -113,7 +114,7 @@
     </one-of>
   </rule>
 
-  <rule id="month">
+  <rule id="month" scope ="publics">
     <item repeat="0-1">of</item>
     <one-of>
         <item>January</item>
@@ -131,7 +132,7 @@
     </one-of>
   </rule>
 
-  <rule id="day">
+  <rule id="day" scope ="publics">
     <one-of>
         <item>Monday</item>
         <item>Tuesday</item>
@@ -143,7 +144,7 @@
     </one-of>
   </rule>
 
-  <rule id="dates">
+  <rule id="dates" scope ="publics">
     <item>
       <rulref uri="#day"/>
       <ruleref uri="#number"/>
@@ -157,7 +158,7 @@
     </item>
   </rule>
 
-  <rule id="flightMeal">
+  <rule id="flightMeal" scope ="publics">
     <one-of>
       <item>Vegetarian option</item>
       <item>Vegan option</item>
@@ -165,7 +166,7 @@
     </one-of>
   </rule>
 
-  <rule id ="planeType">
+  <rule id ="planeType" scope ="publics">
     <one-of>
       <item>Boeing 747</item>
       <item>747<tag>out="Boeing 747";</tag></item>
@@ -175,7 +176,7 @@
     </one-of>
   </rule>
 
-  <rule id="polite">
+  <rule id="polite" scope ="publics">
     <one-of>
       <item>please</item>
       <item>would you please</item>
@@ -184,7 +185,7 @@
     </one-of>
   </rule>
 
-  <rule id="insideOutsside">
+  <rule id="insideOutsside" scope ="publics">
     <one-of>
       <item>inside</item>
       <item>outside</item>
