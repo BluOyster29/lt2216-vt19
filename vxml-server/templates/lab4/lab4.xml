@@ -15,7 +15,7 @@
   </link>
 
   <nomatch>
-    I didn't understand, try talking with an American accent.
+    I didn't understand, try talking with an American accent or like a robot.
     <reprompt/>
   </nomatch>
   
@@ -24,26 +24,20 @@
     <reprompt/>
   </noinput>
 
-  <!-- Data model -->
   <var name="confirm" />
   <var name="food" />
   <var name="seat"/>
   <var name="model"/>
 
-
-  <!-- State machine -->
   <form id="welcome">
-    <block>
-      
       <prompt>
 	    <break time="2000" />
-	      Welcome to The Altered Beast flight booking service
+	      Welcome to The Altered Beast flight booking service. You can start again any time by saying
+        start over. 
       </prompt>
       <goto next="#flightBooking"/>
-    </block>
   </form>
 
-<!--
 <menu id="mainMenu">
   <prompt>
     Main Menu, please choose from; flight booking service, delayed flights, or life advice.
@@ -58,7 +52,6 @@
     life advice
   </choice>
 </menu>
--->
 
 <form id="flightBooking">
   <field name="bookingSheet">
