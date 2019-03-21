@@ -96,7 +96,7 @@
       <option>yes</option>
       <option>No</option>
       <filled>
-        <assign name="confirma" expr="con"/>
+        <assign name="confirm" expr="con"/>
         <if cond="confirm =='yes'">
           <goto next = "#extras"/>
         <else>
