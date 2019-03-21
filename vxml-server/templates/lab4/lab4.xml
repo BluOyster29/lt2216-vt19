@@ -63,26 +63,28 @@
 
 <form id="flightBooking">
   <field name="bookingSheet">
-      <prompt>
+      <prompt count="1">
           Please answer the following.
           Where would you like to fly and from where are you departing.
       </prompt>
+      <prompt count="2"> You can specifiy the city of departure and arrival, as well as the date </prompt>
+      <prompt count="3"> Here is an example, I want to fly from London to Paris on the 22nd of July</prompt>
       <grammar src="grammars/lab4_grammar.xml"/>
   </field>
   <filled>
-      <prompt>
-          nice!
-          <value expr="bookingSheet$.interpretation.statement"/>
-          from
-          <value expr="bookingSheet$.interpretation.flyFrom"/>
-          to
-          <value expr="bookingSheet$.interpretation.flyTo"/>
-          on the 
-          <value expr="bookingSheet$.interpretation.number"/>
-          of 
-          <value expr="bookingSheet$.interpretation.month"/>
-          <goto next="#confirmation"/>        
-          </prompt>
+    <prompt>
+        nice!
+        <value expr="bookingSheet$.interpretation.statement"/>
+        from
+        <value expr="bookingSheet$.interpretation.flyFrom"/>
+        to
+        <value expr="bookingSheet$.interpretation.flyTo"/>
+        on the 
+        <value expr="bookingSheet$.interpretation.number"/>
+        of 
+        <value expr="bookingSheet$.interpretation.month"/>       
+        </prompt>
+        <goto next="#confirmation"/> 
   </filled>
   </form>
 
@@ -109,10 +111,21 @@
   </form>
 
   <form id="extras">
-    <field id="optionals">
+    <field id="meal">
       <prompt>
-        Please answer the following
+        Please answer the following.
+        What meal would you like?
       </prompt>
     </field>
+    <field id="insideOutside">
+      <prompt>
+        Would you like to sit inside our oustide the plane?
+      </prompt>
+    </field>
+    <field id="plane">
+      <prompt>
+        What make of plane would you like.
+      </prompt> 
+    </field>
   </form>
-  </vxml>
+</vxml>
