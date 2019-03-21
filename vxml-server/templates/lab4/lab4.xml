@@ -43,7 +43,7 @@
 	Welcome to The Altered Beast flight booking service.
 
       </prompt>
-      <goto next="#bookingSheet"/>
+      <goto next="#flightBooking"/>
     </block>
   </form>
 
@@ -63,7 +63,7 @@
   </choice>
 </menu>
 -->
-<form id="flight_booking">
+<form id="flightBooking">
     <field name="bookingSheet">
         <prompt>
             Please answer the following.
