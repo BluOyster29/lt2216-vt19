@@ -29,8 +29,12 @@
         <tag>out.flyTo = rules.flyTo;</tag>
       </item>
       <item>
-        <ruleref uri="#date"/>
-        <tag>out.date = rules.date</tag>
+        <ruleref uri="#number"/>
+        <tag>out.number = rules.number;</tag>
+      </item>
+      <item>
+        <ruleref uri="#month"/>
+        <tag>out.month = rules.month;</tag>
       </item>
   </rule>
   

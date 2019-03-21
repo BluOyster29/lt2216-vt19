@@ -78,7 +78,9 @@
             to
             <value expr="bookingSheet$.interpretation.flyTo"/>
             on the 
-            <value expr="bookingSheet$.interpretation.flyTo"/>
+            <value expr="bookingSheet$.interpretation.number"/>
+            of 
+            <value expr="bookingSheet$.interpretation.month"/>
             
         </prompt>
     </filled>
