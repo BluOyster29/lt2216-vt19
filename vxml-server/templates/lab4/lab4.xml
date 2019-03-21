@@ -26,8 +26,8 @@
 
   <!-- Data model -->
   <var name="confirm" />
-  <var name="to" />
-  <var name="when"/>
+  <var name="depart" />
+  <var name="arrival"/>
   <var name="isRetrun"/>
   <var name="correct"/>
   <var name="returnDay"/>
@@ -72,19 +72,29 @@
       <grammar src="grammars/lab4_grammar.xml"/>
   </field>
   <filled>
-    <prompt>
-        nice!
-        <value expr="bookingSheet$.interpretation.statement"/>
-        from
-        <value expr="bookingSheet$.interpretation.flyFrom"/>
-        to
-        <value expr="bookingSheet$.interpretation.flyTo"/>
-        on the 
-        <value expr="bookingSheet$.interpretation.number"/>
-        of 
-        <value expr="bookingSheet$.interpretation.month"/>       
-        </prompt>
-        <goto next="#confirmation"/> 
+    <if cond="'bookingSheet$.interpretation.flyFrom' == 'bookingSheet$.interpretation.flyTo'">
+      <prompt>
+        Your destination and departure can not be the same. Try again
+      </prompt>
+      <goto next="#bookingSheet"/>
+    <else>
+      <prompt>
+      nice!
+      <value expr="bookingSheet$.interpretation.statement"/>
+      from
+      <value expr="bookingSheet$.interpretation.flyFrom"/>
+      to
+      <value expr="bookingSheet$.interpretation.flyTo"/>
+      on the 
+      <value expr="bookingSheet$.interpretation.number"/>
+      of 
+      <value expr="bookingSheet$.interpretation.month"/>       
+      </prompt>
+      <goto next="#confirmation"/> 
+    </else>
+    </if>
+  
+   
   </filled>
   </form>
 
