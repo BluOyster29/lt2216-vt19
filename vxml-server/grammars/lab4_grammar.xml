@@ -29,6 +29,12 @@
         <ruleref uri ="#flyTo"/>
         <tag>out.flyTo = rules.flyTo;</tag>
       </item>
+      <item>
+        <rulref uri="#date"/>
+        <tag>
+          out.date = rules.date;
+        </tag>
+      </item>
     </one-of>
   </rule>
   
