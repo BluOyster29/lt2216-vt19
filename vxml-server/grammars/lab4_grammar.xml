@@ -13,17 +13,23 @@
     </item>
   </rule>
   -->
-  <rule id="toFrom" scope="pubilc">
-    <item>
-      <ruleref uri="#statement"/>
-      <ruleref uri ="#flyFrom"/>
-      <ruleref uri ="#flyTo"/>
-      <tag>
-        out.statement = rules.statement;
+  <rule id="toFrom" scope="public">
+    <one-of>
+      <item>
+        <ruleref uri="#statement"/>
+        <tag>out.statement = rules.statement;</tag>
+      </item>
+      <item>
+        <ruleref uri ="#flyFrom"/>
+        <tag>
         out.flyFrom = rules.flyFrom;
-        out.flyTo = rules.flyTo;
-      </tag>
-    </item>
+        </tag>
+      </item>
+      <item>
+        <ruleref uri ="#flyTo"/>
+        <tag>out.flyTo = rules.flyTo;</tag>
+      </item>
+    </one-of>
   </rule>
   
   <rule id="statement" scope ="public">
