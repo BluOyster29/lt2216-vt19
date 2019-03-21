@@ -44,22 +44,22 @@
   <rule id="flyFrom" scope ="public">
       <item repeat="0-1">from</item>
       <one-of>
-          <item>London</item>
-          <item>Paris</item>
-          <item>New York</item>
-          <item>Earth</item>
-          <item>Berlin</item>
+          <item>London<tag>out="London";</tag></item>
+          <item>Paris<tag>out="Paris";</tag></item>
+          <item>New York<tag>out="Yankee Land";</tag></item>
+          <item>Earth<tag>out="Planet Earth";</tag></item>
+          <item>Berlin<tag>out="Berlin";</tag></item>
       </one-of>
   </rule>
   
   <rule id= "flyTo" scope ="public">
     <item repeat="0-1">to</item>
     <one-of>
-          <item>London</item>
-          <item>Paris</item>
-          <item>New York</item>
-          <item>Earth</item>
-          <item>Berlin</item>
+          <item>London<tag>out="London";</tag></item>
+          <item>Paris<tag>out="Paris";</tag></item>
+          <item>New York<tag>out="Yankee Land";</tag></item>
+          <item>Earth<tag>out="Planet Earth";</tag></item>
+          <item>Berlin<tag>out="Berlin";</tag></item>
       </one-of>
   </rule>
 
