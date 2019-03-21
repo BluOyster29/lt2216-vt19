@@ -167,9 +167,9 @@
   -->
   <rule id="flightMeal" scope ="public">
     <one-of>
-      <item>Vegetarian option</item>
-      <item>Vegan option</item>
-      <item>Meat option</item>
+      <item>Vegetarian option<tag>out="veggie option";</tag></item>
+      <item>Vegan option<tag>out="vegan option;</tag></item>
+      <item>Meat option<tag>out="cruel option";</tag></item>
     </one-of>
   </rule>
 
@@ -183,16 +183,7 @@
     </one-of>
   </rule>
 
-  <rule id="polite" scope ="public">
-    <one-of>
-      <item>please</item>
-      <item>would you please</item>
-      <item>would you kindly</item>
-      <item>oi drongo!</item>
-    </one-of>
-  </rule>
-
-  <rule id="insideOutsside" scope ="public">
+  <rule id="insideOutside" scope ="public">
     <one-of>
       <item>inside</item>
       <item>outside</item>

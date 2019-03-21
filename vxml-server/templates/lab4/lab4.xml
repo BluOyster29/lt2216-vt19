@@ -76,7 +76,7 @@
       <prompt>
         Your destination and departure can not be the same. Try again
       </prompt>
-      <goto next="#bookingSheet"/>
+      <goto next="#flightBooking"/>
     <else>
       <prompt>
       nice!
@@ -108,6 +108,9 @@
       <filled>
         <assign name="confirm" expr="con"/>
         <if cond="confirm =='yes'">
+          <prompt>
+            Great lets take you to the extras
+          </prompt>
           <goto next = "#extras"/>
         <else>
           <prompt>
@@ -126,16 +129,43 @@
         Please answer the following.
         What meal would you like?
       </prompt>
+      <prompt count="2">
+        You can choose from Vegetarian, vegan or cruel option
+      </prompt>
+      <grammar src="grammars/lab4_grammar.xml#flightMeal"/>
     </field>
     <field id="insideOutside">
       <prompt>
         Would you like to sit inside our oustide the plane?
       </prompt>
+      <grammar src="grammars/lab4_grammar.xml#insideOutside"/>
     </field>
     <field id="plane">
       <prompt>
         What make of plane would you like.
       </prompt> 
+      <prompt count="2">
+        We currently have 747, Conchord, Hot air balloon and helicopter. We no longer
+        run the 747 Max 
+      </prompt>
+      <grammar src="grammars/lab4_grammar.xml#planeType"/>
     </field>
+    <filled>
+      <prompt>
+        Your Extras are as follows, you are having the 
+        <value expr="meal$.interpretation.flightMeal"/> and you are 
+        traveling by <value expr="plane.interpretation.planeType"/>
+        <if cond="insideOutside$.interpretation.insideOutside = 'outside'">
+          <prompt>
+            and you are strangely enough sitting on the outside, good luck with that
+          </prompt>
+        <else>
+          <prompt>
+            And luckily you are sitting inside the plane.
+          </prompt>
+        </else>
+        </if>
+      </prompt>
+    </filled>
   </form>
 </vxml>
