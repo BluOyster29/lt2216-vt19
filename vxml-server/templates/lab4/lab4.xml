@@ -47,6 +47,7 @@
     </block>
   </form>
 
+<!--
 <menu id="mainMenu">
   <prompt>
     Main Menu, please choose from; flight booking service, delayed flights, or life advice.
@@ -61,7 +62,7 @@
     life advice
   </choice>
 </menu>
-
+-->
 <form id="flight_booking">
     <field name="bookingSheet">
         <prompt>
