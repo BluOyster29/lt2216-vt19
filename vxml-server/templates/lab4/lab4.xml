@@ -77,7 +77,7 @@
         Your destination and departure can not be the same. Try again
       </prompt>
       <goto next="#flightBooking"/>
-    <else>
+    <else/>
       <prompt>
       nice!
       <value expr="bookingSheet$.interpretation.statement"/>
@@ -91,10 +91,8 @@
       <value expr="bookingSheet$.interpretation.month"/>       
       </prompt>
       <goto next="#confirmation"/> 
-    </else>
+    
     </if>
-  
-   
   </filled>
   </form>
 
@@ -159,11 +157,11 @@
           <prompt>
             and you are strangely enough sitting on the outside, good luck with that
           </prompt>
-        <else>
+        <else/>
           <prompt>
             And luckily you are sitting inside the plane.
           </prompt>
-        </else>
+        
         </if>
       </prompt>
     </filled>
