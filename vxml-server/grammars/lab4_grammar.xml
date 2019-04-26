@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<grammar version="1.0" tag-format="semantics/1.0" root="toFrom">
+<grammar version="1.0" tag-format="semantics/1.0" root="root">
 
   <rule id="toFrom" scope="public">
       <item>
@@ -26,6 +26,79 @@
       </item>
   </rule>
   
+  <rule id="root" scope="public">
+    <one-of>
+
+      <item>
+	      <ruleref uri="#from"/>
+        <tag>out=rules.from;</tag> 
+      </item>
+
+      <item>
+	      <ruleref uri="#to"/> 
+        <tag>out=rules.to;</tag>
+      </item>
+      
+      <item>
+	      <ruleref uri="#leavingDate"/> 
+        <tag>out=rules.leavingDate;</tag>
+      </item>
+
+      <item>
+	      <ruleref uri="#returnDate"/> 
+        <tag>out=rules.returnDate;</tag>
+      </item>
+
+      <item>
+	      <ruleref uri="#from"/>
+        <ruleref uri="#to"/>
+	      <tag> out.departure = rules.from; 
+              out.destination = rules.to; 
+        </tag>
+      </item>
+
+      <item>
+	      <ruleref uri="#from"/>
+        <ruleref uri="#to"/>
+        <ruleref uri="#departureDate"/>
+	      <tag> out.departure = rules.from; 
+              out.destination = rules.to; 
+              out.date = rules.departureDate;
+        </tag>
+      </item>
+
+      <item>
+	      <ruleref uri="#from"/>
+        <ruleref uri="#departureDate"/>
+	      <tag> out.departure = rules.from; 
+              out.date = rules.departureDate; 
+        </tag>
+      </item>
+
+      <item> 
+	      <ruleref uri="#departureDate"/>
+        <ruleref uri="#returnDate"/>
+	      <tag> out.date = rules.departureDate; 
+              out.returning = rules.returnDate;
+        </tag>
+      </item>
+      
+      <item>
+	      <ruleref uri="#from"/>
+        <ruleref uri="#to"/>
+        <ruleref uri="#departureDate"/>
+        <ruleref uri="#returnDate"/>
+	      <tag> out.departure = rules.origin; 
+              out.destination = rules.dest; 
+              out.date = rules.leavingDate; 
+              out.returning = rules.returnDate;
+        </tag>
+      </item>
+
+    </one-of>
+</rule>
+
+
   <rule id="statement" scope ="public">
       <one-of>
           <item>I would like to fly<tag>out="you want to fly";</tag></item>

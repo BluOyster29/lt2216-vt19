@@ -54,15 +54,44 @@
 </menu>
 
 <form id="flightBooking">
-  <field name="bookingSheet">
-      <prompt count="1">
-          Please answer the following.
-          Where would you like to fly and from where are you departing.
-      </prompt>
-      <prompt count="2"> You can specifiy the city of departure and arrival, as well as the date </prompt>
-      <prompt count="3"> Here is an example, I want to fly from London to Paris on the 22nd of July</prompt>
+  
+  
+  <field name="bookingForm">
       <grammar src="grammars/lab4_grammar.xml"/>
+      <prompt count="1">
+        Where would you like to fly and from where are you flying?
+      </prompt>
+      <prompt count="2"> 
+        I didn't catch that, for example you can say 'i want to fly to new york from paris on tuesday'
+      </prompt>
   </field>
+  
+  <field name="to">
+      <grammar src="grammars/lab4.xml#to"/>
+      <prompt count="2"> Where are you flying to? </prompt>
+    </field>  
+    <field name="from">
+      <grammar src="grammars/lab4.xml#from"/>
+      <prompt> 
+        From where are you flying? 
+      </prompt>
+      <prompt count="2"> 
+        What is your departure destination?
+      </prompt>
+    </field>
+
+    <field name="departingDate">
+      <grammar src="grammars/lab4.xml#leavingDate"/>
+      <prompt> what date are you leaving </prompt>
+      <prompt count="2"> to choose your leaving date you can say any day of the week </prompt>
+    </field>
+
+    <field name="returningDate">
+      <grammar src="grammars/lab4.xml#returnDate"/>
+      <prompt> what date are you returning </prompt>
+      <prompt count="2"> to choose your return date you can say any day of the week </prompt>
+    </field>
+
   <filled>
     <if cond="bookingSheet$.interpretation.flyFrom == bookingSheet$.interpretation.flyTo">
       <prompt>
