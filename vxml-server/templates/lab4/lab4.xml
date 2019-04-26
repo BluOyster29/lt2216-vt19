@@ -67,29 +67,29 @@
   </field>
   
   <field name="to">
-      <grammar src="grammars/lab4.xml#to"/>
-      <prompt count="2"> Where are you flying to? </prompt>
+      <grammar src="grammars/lab4_grammar.xml#to"/>
+      <prompt> Where are you flying to? </prompt>
     </field>  
     <field name="from">
-      <grammar src="grammars/lab4.xml#from"/>
+      <grammar src="grammars/lab4_grammar.xml#from"/>
       <prompt> 
         From where are you flying? 
       </prompt>
-      <prompt count="2"> 
+      <prompt> 
         What is your departure destination?
       </prompt>
     </field>
 
     <field name="departingDate">
-      <grammar src="grammars/lab4.xml#leavingDate"/>
+      <grammar src="grammars/lab4_grammar.xml#departureDate"/>
       <prompt> what date are you leaving </prompt>
-      <prompt count="2"> to choose your leaving date you can say any day of the week </prompt>
+      <prompt> what day of the week are you leaving? </prompt>
     </field>
 
     <field name="returningDate">
-      <grammar src="grammars/lab4.xml#returnDate"/>
+      <grammar src="grammars/lab4_grammar.xml#returnDate"/>
       <prompt> what date are you returning </prompt>
-      <prompt count="2"> to choose your return date you can say any day of the week </prompt>
+      <prompt> what day of the week are you returning </prompt>
     </field>
 
   <filled>
@@ -103,13 +103,17 @@
       nice!
       <value expr="bookingSheet$.interpretation.statement"/>
       from
-      <value expr="bookingSheet$.interpretation.flyFrom"/>
+      <value expr="bookingSheet$.interpretation.from"/>
       to
-      <value expr="bookingSheet$.interpretation.flyTo"/>
+      <value expr="bookingSheet$.interpretation.to"/>
       on the 
       <value expr="bookingSheet$.interpretation.number"/>
       of 
-      <value expr="bookingSheet$.interpretation.month"/>       
+      <value expr="bookingSheet$.interpretation.depatureDate"/>  
+      returning on the     
+      <value expr="bookingSheet$.interpretation.number"/>
+      of 
+      <value expr="bookingSheet$.interpretation.returnDate"/>   
       </prompt>
       <goto next="#confirmation"/> 
     
