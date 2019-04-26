@@ -30,18 +30,18 @@
     <one-of>
 
       <item>
-	      <ruleref uri="#from"/>
+	      <ruleref uri="#flyFrom"/>
         <tag>out=rules.from;</tag> 
       </item>
 
       <item>
-	      <ruleref uri="#to"/> 
+	      <ruleref uri="#flyTo"/> 
         <tag>out=rules.to;</tag>
       </item>
       
       <item>
-	      <ruleref uri="#leavingDate"/> 
-        <tag>out=rules.leavingDate;</tag>
+	      <ruleref uri="#departureDate"/> 
+        <tag>out=rules.departureDate;</tag>
       </item>
 
       <item>
@@ -50,16 +50,16 @@
       </item>
 
       <item>
-	      <ruleref uri="#from"/>
-        <ruleref uri="#to"/>
+	      <ruleref uri="#flyFrom"/>
+        <ruleref uri="#flyTo"/>
 	      <tag> out.departure = rules.from; 
               out.destination = rules.to; 
         </tag>
       </item>
 
       <item>
-	      <ruleref uri="#from"/>
-        <ruleref uri="#to"/>
+	      <ruleref uri="#flyFrom"/>
+        <ruleref uri="#flyTo"/>
         <ruleref uri="#departureDate"/>
 	      <tag> out.departure = rules.from; 
               out.destination = rules.to; 
@@ -68,7 +68,7 @@
       </item>
 
       <item>
-	      <ruleref uri="#from"/>
+	      <ruleref uri="#flyFrom"/>
         <ruleref uri="#departureDate"/>
 	      <tag> out.departure = rules.from; 
               out.date = rules.departureDate; 
@@ -84,8 +84,8 @@
       </item>
       
       <item>
-	      <ruleref uri="#from"/>
-        <ruleref uri="#to"/>
+	      <ruleref uri="#flyFrom"/>
+        <ruleref uri="#flyTo"/>
         <ruleref uri="#departureDate"/>
         <ruleref uri="#returnDate"/>
 	      <tag> out.departure = rules.origin; 
@@ -98,6 +98,27 @@
     </one-of>
 </rule>
 
+  <rule id="returnDate">
+    <item>
+      <ruleref uri ="number"/>
+      <ruleref uri ="date"/>
+      <tag>
+        out.number = rules.number;
+        out.date = rules.date;
+      </tag>
+    </item>
+  </rule>
+
+  <rule id="departureDate">
+  <item>
+    <ruleref uri ="number"/>
+    <ruleref uri ="date"/>
+    <tag>
+      out.number = rules.number;
+      out.date = rules.date;
+    </tag>
+  </item>
+</rule>
 
   <rule id="statement" scope ="public">
       <one-of>
