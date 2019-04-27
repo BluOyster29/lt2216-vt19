@@ -58,37 +58,35 @@
   
   <field name="bookingForm">
       <grammar src="grammars/lab4_grammar.xml"/>
-      <prompt count="1">
+      <prompt>
         Where would you like to fly and from where are you flying?
       </prompt>
       <prompt count="2"> 
         I didn't catch that, for example you can say 'i want to fly to new york from paris on tuesday'
       </prompt>
+      <prompt count="3">
+        For example you can say, I would like to fly to paris from London on Tuesday
+      </prompt>
   </field>
   
   <field name="to">
-      <grammar src="grammars/lab4_grammar.xml#to"/>
+      <grammar src="grammars/lab4_grammar.xml#flyTo"/>
       <prompt> Where are you flying to? </prompt>
     </field>  
     <field name="from">
-      <grammar src="grammars/lab4_grammar.xml#from"/>
+      <grammar src="grammars/lab4_grammar.xml#flyFrom"/>
       <prompt> 
         From where are you flying? 
-      </prompt>
-      <prompt> 
-        What is your departure destination?
       </prompt>
     </field>
 
     <field name="departingDate">
       <grammar src="grammars/lab4_grammar.xml#departureDate"/>
-      <prompt> what date are you leaving </prompt>
       <prompt> what day of the week are you leaving? </prompt>
     </field>
 
     <field name="returningDate">
       <grammar src="grammars/lab4_grammar.xml#returnDate"/>
-      <prompt> what date are you returning </prompt>
       <prompt> what day of the week are you returning </prompt>
     </field>
 
